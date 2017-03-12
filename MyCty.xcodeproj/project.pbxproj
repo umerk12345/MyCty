@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1D8E6B058AA9E76AD01C1ABA /* Pods_MyCty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B5BF96DC3E69C16C4A726E /* Pods_MyCty.framework */; };
 		748E31561E74F21C00911071 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 748E31551E74F21C00911071 /* GoogleService-Info.plist */; };
+		748E315C1E750B5500911071 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E315B1E750B5500911071 /* HomePageController.swift */; };
 		74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */; };
 		74F1A8271E74EE3E00EA0188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8261E74EE3E00EA0188 /* Assets.xcassets */; };
 		74F1A82A1E74EE3E00EA0188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8281E74EE3E00EA0188 /* LaunchScreen.storyboard */; };
@@ -20,6 +21,7 @@
 /* Begin PBXFileReference section */
 		5CDD8FE7E90576C253045835 /* Pods-MyCty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCty/Pods-MyCty.debug.xcconfig"; sourceTree = "<group>"; };
 		748E31551E74F21C00911071 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		748E315B1E750B5500911071 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		74F1A81C1E74EE3E00EA0188 /* MyCty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F1A8261E74EE3E00EA0188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -73,6 +75,7 @@
 				748E31551E74F21C00911071 /* GoogleService-Info.plist */,
 				74F1A8371E74EFE300EA0188 /* LoginViewController.swift */,
 				74F1A82B1E74EE3E00EA0188 /* Info.plist */,
+				748E315B1E750B5500911071 /* HomePageController.swift */,
 			);
 			path = MyCty;
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				74F1A8381E74EFE300EA0188 /* LoginViewController.swift in Sources */,
+				748E315C1E750B5500911071 /* HomePageController.swift in Sources */,
 				74F1A8361E74EFDB00EA0188 /* ViewController.swift in Sources */,
 				74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */,
 			);

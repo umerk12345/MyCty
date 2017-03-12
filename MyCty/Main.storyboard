@@ -12,7 +12,7 @@
         <!--SecondViewController-->
         <scene sceneID="L1p-U2-dwU">
             <objects>
-                <viewController id="7Po-vO-Zga" userLabel="SecondViewController" customClass="SecondViewController" customModule="MyCty" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Login" useStoryboardIdentifierAsRestorationIdentifier="YES" id="7Po-vO-Zga" userLabel="SecondViewController" customClass="SecondViewController" customModule="MyCty" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="8c0-0J-poc"/>
                         <viewControllerLayoutGuide type="bottom" id="atd-oZ-PWq"/>
@@ -123,7 +123,7 @@
                         <outlet property="emailLoginTxt" destination="EYd-Co-CLK" id="73X-1n-oxd"/>
                         <outlet property="loginBtnLbl" destination="bPL-Ds-y4v" id="oj0-eW-bRU"/>
                         <outlet property="passwordLoginTxt" destination="eUq-mt-e0c" id="zXT-MO-9ue"/>
-                        <segue destination="aCu-5y-XEm" kind="show" identifier="loginToMain" id="JuB-gR-kLP"/>
+                        <segue destination="gqA-yK-K53" kind="show" identifier="loginToHome" id="6uH-c1-wkn"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cNk-9n-cF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -343,6 +343,53 @@
             </objects>
             <point key="canvasLocation" x="-113" y="-500"/>
         </scene>
+        <!--Home View Controller-->
+        <scene sceneID="fWN-d2-bM4">
+            <objects>
+                <viewController storyboardIdentifier="Home" useStoryboardIdentifierAsRestorationIdentifier="YES" id="gqA-yK-K53" userLabel="Home View Controller" customClass="HomeViewController" customModule="MyCty" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AlX-2F-loG"/>
+                        <viewControllerLayoutGuide type="bottom" id="dFU-JL-Jhq"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="IcJ-oV-uXd">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jV4-co-wgd">
+                                <rect key="frame" x="40" y="220" width="240" height="128"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HKC-IM-ugY">
+                                        <rect key="frame" x="95" y="49" width="50" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="50" id="j82-gw-0le"/>
+                                            <constraint firstAttribute="height" constant="30" id="uac-wv-gEo"/>
+                                        </constraints>
+                                        <state key="normal" title="Logout"/>
+                                        <connections>
+                                            <action selector="Btn:" destination="gqA-yK-K53" eventType="touchUpInside" id="TvU-hx-qdg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="5uQ-AW-2iv"/>
+                                    <constraint firstAttribute="width" constant="240" id="Ub2-oZ-njX"/>
+                                    <constraint firstItem="HKC-IM-ugY" firstAttribute="centerY" secondItem="jV4-co-wgd" secondAttribute="centerY" id="eAj-ex-Eyg"/>
+                                    <constraint firstItem="HKC-IM-ugY" firstAttribute="centerX" secondItem="jV4-co-wgd" secondAttribute="centerX" id="pzb-P0-vWv"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jV4-co-wgd" firstAttribute="centerY" secondItem="IcJ-oV-uXd" secondAttribute="centerY" id="BqE-My-upt"/>
+                            <constraint firstItem="jV4-co-wgd" firstAttribute="centerX" secondItem="IcJ-oV-uXd" secondAttribute="centerX" id="hI1-R8-LWZ"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oIF-zy-2LR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1779" y="139"/>
+        </scene>
         <!--Terms-->
         <scene sceneID="YEw-cY-rwZ">
             <objects>
@@ -410,46 +457,11 @@
             </objects>
             <point key="canvasLocation" x="-827" y="-26"/>
         </scene>
-        <!--mainPage-->
-        <scene sceneID="12B-7A-9Ol">
-            <objects>
-                <viewController id="aCu-5y-XEm" userLabel="mainPage" customClass="mainPage" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Yac-eT-Vak"/>
-                        <viewControllerLayoutGuide type="bottom" id="mTJ-Cw-BlS"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="gYK-3b-PWU">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="efF-ZT-twm">
-                                <rect key="frame" x="136" y="269" width="48" height="30"/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="logoutPressed:" destination="aCu-5y-XEm" eventType="touchUpInside" id="3aC-sS-dhP"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="efF-ZT-twm" firstAttribute="centerX" secondItem="gYK-3b-PWU" secondAttribute="centerX" id="1p6-OE-1xq"/>
-                            <constraint firstItem="efF-ZT-twm" firstAttribute="centerY" secondItem="gYK-3b-PWU" secondAttribute="centerY" id="z5g-px-JoZ"/>
-                        </constraints>
-                    </view>
-                    <connections>
-                        <segue destination="7Po-vO-Zga" kind="show" identifier="logout" id="j70-Zd-8ax"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="44S-1H-ZQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1762" y="635"/>
-        </scene>
     </scenes>
     <resources>
         <image name="emptyProfilePic" width="225" height="225"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="psZ-Tw-8Re"/>
-        <segue reference="SmE-GT-V3c"/>
     </inferredMetricsTieBreakers>
 </document>

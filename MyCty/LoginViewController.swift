@@ -21,6 +21,7 @@ class SecondViewController: UIViewController {
   
     }
     
+   
     
     @IBAction func forgotPassword(_ sender: Any) {
         
@@ -57,6 +58,7 @@ class SecondViewController: UIViewController {
         }
     }
     
+   //LOGIN BUTTON
     @IBAction func loginBtn(_ sender: Any) {
  
         if self.emailLoginTxt.text == "" || self.passwordLoginTxt.text == "" {
@@ -71,10 +73,6 @@ class SecondViewController: UIViewController {
             self.present(alertController, animated: true, completion: nil)
             
         }
-        
-        
-        
-        
         guard let email = emailLoginTxt.text, let password = passwordLoginTxt.text else{
                     print("form is not valid")
                     return
@@ -90,7 +88,7 @@ class SecondViewController: UIViewController {
                         self.present(alertController, animated: true, completion: nil)
                     }
                         else {
-                   self.performSegue(withIdentifier: "loginToMain", sender: self)
+                   self.performSegue(withIdentifier: "loginToHome", sender: self)
                         }
  
                 })
@@ -101,22 +99,7 @@ override func viewDidLoad() {
     super.viewDidLoad()
     loginBtnLbl.layer.cornerRadius = 10
     
-    func handleLogout() {
-        do {
-            try FIRAuth.auth()?.signOut()
-            return
-            } catch let logoutError {
-                print(logoutError)
-            }
-        return
-        }
-        
-    
-    
-    if FIRAuth.auth()?.currentUser?.uid == nil {
-        handleLogout()
-    }
-    
+   
     
     
   

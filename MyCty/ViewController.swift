@@ -123,7 +123,35 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                     guard let uid = user?.uid else {
                         return
                     }
-                    let ref = FIRDatabase.database().reference(fromURL: "https://mycty-bc2ab.firebaseio.com/")
+                    
+                    let imageName = NSUUID().uuidString
+                    let storageRef = FIRStorage.storage().reference().child("profile_images").child("\(imageName).png")
+                    
+                    if let uploadData = UIImagePNGRepresentation(self.profilePic.image!) {
+                        storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
+                            
+                            if error != nil {
+                                print(error)
+                                return
+                            }
+                            
+                            if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
+                                
+                                  let ref = FIRDatabase.database().reference(fromURL: "https://mycty-bc2ab.firebaseio.com/")
+                                let values = ["Username" : username, "Email": email, "Password" :password, "Phone Number": phonenumber, "profileImageUrl": profileImageUrl]
+                              
+                                let userReference = ref.child("Users").child(uid)
+                                userReference.updateChildValues(values, withCompletionBlock: {(err, ref) in
+                                    if err != nil {
+                                        print (err!)
+                                        return
+                                    }
+                                
+                                })
+                                
+                            }
+                
+                 /*  let ref = FIRDatabase.database().reference(fromURL: "https://mycty-bc2ab.firebaseio.com/")
                     let userReference = ref.child("Users").child(uid)
                     
                     let values = ["Username" : username, "Email": email, "Password" :password, "Phone Number": phonenumber]
@@ -133,18 +161,16 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                             print (err!)
                             return
                         }
-                        
-                    })
+ 
+                            })
+ */
+                        })
+                    }
                 }
             }
         })
-        
         }
-        
-    }
-
-
-                    //print("Saved user successfully into Firebase db")
+    }   //print("Saved user successfully into Firebase db")
             
         
             /*
@@ -181,7 +207,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
         
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        if let image = info[UIImagePickerControllerEditedImage] as? UIImage
         {
             profilePic.image = image
             
