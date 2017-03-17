@@ -11,52 +11,33 @@ import FirebaseAuth
 
 class SecondViewController: UIViewController {
     
+    @IBOutlet weak var backBtn: UIButton!
+    
+    @IBAction func signUp(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OpeningView")
+        present(vc, animated: true, completion: nil)
+    }
+    
     
     @IBOutlet weak var loginBtnLbl: UIButton!
  
     @IBOutlet weak var emailLoginTxt: UITextField!
     @IBOutlet weak var passwordLoginTxt: UITextField!
     
-    @IBAction func signUp(_ sender: Any) {
-  
-    }
-    
-   
-    
-    @IBAction func forgotPassword(_ sender: Any) {
-        
-        if self.emailLoginTxt.text == "" {
-            let alertController = UIAlertController(title: "Error", message: "Please enter an email first.", preferredStyle: .alert)
-            
-            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-            alertController.addAction(defaultAction)
-            
-            present(alertController, animated: true, completion: nil)
-            
-        } else {
-            FIRAuth.auth()?.sendPasswordReset(withEmail: self.emailLoginTxt.text!, completion: { (error) in
-                
-                var title = ""
-                var message = ""
-                
-                if error != nil {
-                    title = "Error!"
-                    message = (error?.localizedDescription)!
-                } else {
-                    title = "Success!"
-                    message = "Password reset email sent."
-                    self.emailLoginTxt.text = ""
-                }
-                
-                let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-                
-                let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                alertController.addAction(defaultAction)
-                
-                self.present(alertController, animated: true, completion: nil)
-            })
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+        if textField == emailLoginTxt{
+            self.passwordLoginTxt.becomeFirstResponder()
         }
+        return true
     }
+  
+    @IBAction func forgotPassword(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "forgotPassword")
+        present(vc, animated: true, completion: nil)
+
+            }
+
+
     
    //LOGIN BUTTON
     @IBAction func loginBtn(_ sender: Any) {
@@ -94,16 +75,52 @@ class SecondViewController: UIViewController {
                 })
         
     }
-    
-override func viewDidLoad() {
-    super.viewDidLoad()
-    loginBtnLbl.layer.cornerRadius = 10
-    
    
     
-    
+   // var gradientLayer: CAGradientLayer!
   
-    //Looks for single or multiple taps.
+    /*
+    func createGradientLayer() {
+        gradientLayer = CAGradientLayer()
+        
+        gradientLayer.frame = self.view.bounds
+        
+       gradientLayer.colors = [UIColor(red: 92.0/255.0, green: 24.0/255.0, blue: 27.0/255.0, alpha: 1.0).cgColor, UIColor(red: 245.0/255.0, green: 69.0/255.0, blue: 107.0/255.0, alpha: 1.0).cgColor]
+        self.view.layer.addSublayer(gradientLayer)
+    }
+    */
+    func configureGradientBackground(colors:CGColor...){
+        
+        let gradient: CAGradientLayer = CAGradientLayer()
+       // let maxWidth = max(self.view.bounds.size.height,self.view.bounds.size.width)
+       // let size = CGSize(width: 100, height: 100)
+        let squareFrame = CGRect(origin: self.view.bounds.origin, size: CGSize(width: 600, height: 1000))
+        gradient.frame = squareFrame
+        
+        gradient.colors = colors
+        view.layer.insertSublayer(gradient, at: 0)
+    }
+    
+    
+    @IBAction func guestBtn(_ sender: Any) {
+        let vc = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "OnBoardingVC")
+        present(vc, animated: true, completion: nil)
+        
+    }
+      
+        override func viewDidLoad() {
+    super.viewDidLoad()
+    loginBtnLbl.layer.cornerRadius = 10
+    backBtn.layer.cornerRadius = 10
+    //createGradientLayer()
+            
+    configureGradientBackground(colors: UIColor(red: 92.0/255.0, green: 24.0/255.0, blue: 27.0/255.0, alpha: 1.0).cgColor, UIColor(red: 245.0/255.0, green: 69.0/255.0, blue: 107.0/255.0, alpha: 1.0).cgColor)
+    
+       // Do any additional setup after loading the view, typically from a nib.
+    
+    // Do any additional setup after loading the view, typically from a nib.
+    
+    
     let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.dismissKeyboard))
     
     //Uncomment the line below if you want the tap not not interfere and cancel other interactions.
@@ -119,10 +136,9 @@ override func viewDidLoad() {
     }
     // Do any additional setup after loading the view, typically from a nib.
     
-    // Do any additional setup after loading the view, typically from a nib.
-
+   
 }
- 
+
 
 
 

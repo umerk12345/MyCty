@@ -18,7 +18,7 @@ import Firebase
 import FirebaseAuth
 
 
-
+var ref:FIRDatabaseReference?
 
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
@@ -37,7 +37,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var retypePassTxtField: UITextField!
     @IBOutlet weak var phoneNumberTxtField: UITextField!
     
-    var ref:FIRDatabaseReference?
+       var ref:FIRDatabaseReference?
     var handle:FIRDatabaseHandle?
  
     @IBAction func backBtn(_ sender: Any) {
@@ -78,6 +78,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             }
         }
         
+        if phoneNumberTxtField.text!.characters.count != 10  {
+            let alertController = UIAlertController(title: "Error", message: "Please enter a 10 digit phone number starting with area code", preferredStyle: .alert)
+            
+            let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            alertController.addAction(defaultAction)
+            
+            present(alertController, animated: true, completion: nil)
+
+        }
         
         //If everything is filled and no errors, sign up
     if usernameTxtField.text != "" && emailTxtField.text != "" && passwordTxtField.text != "" && retypePassTxtField.text != "" && phoneNumberTxtField.text != "" && passwordTxtField.text == retypePassTxtField.text{
@@ -131,7 +140,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                         storageRef.put(uploadData, metadata: nil, completion: { (metadata, error) in
                             
                             if error != nil {
-                                print(error)
+                                print(error!)
                                 return
                             }
                             
@@ -150,6 +159,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                                 })
                                 
                             }
+                            
                 
                  /*  let ref = FIRDatabase.database().reference(fromURL: "https://mycty-bc2ab.firebaseio.com/")
                     let userReference = ref.child("Users").child(uid)
@@ -166,6 +176,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
  */
                         })
                     }
+                    self.performSegue(withIdentifier: "signinToHome", sender: self)
+
                 }
             }
         })
@@ -238,15 +250,66 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
  */
      //make the profile pic round
  
+    func configureGradientBackground(colors:CGColor...){
+        
+        let gradient: CAGradientLayer = CAGradientLayer()
+        //let maxWidth = max(self.view.bounds.size.height,self.view.bounds.size.width)
+        // let size = CGSize(width: 100, height: 100)
+        let squareFrame = CGRect(origin: self.view.bounds.origin, size: CGSize(width: 600, height: 1000))
+        gradient.frame = squareFrame
+        
+        gradient.colors = colors
+        view.layer.insertSublayer(gradient, at: 0)
+    }
     
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {   //delegate method
+        if textField == usernameTxtField{
+            self.emailTxtField.becomeFirstResponder()
+        }
+        else if textField == emailTxtField{
+            self.passwordTxtField.becomeFirstResponder()
+        
+        }
+        else if textField == passwordTxtField{
+            self.retypePassTxtField.becomeFirstResponder()
+        }
+        else if textField == retypePassTxtField{
+            self.phoneNumberTxtField.becomeFirstResponder()
+        }
+        return true
+    }    
+    /*
+    func keyboardWillShow(notification: NSNotification) {
+        //To retrieve keyboard size, uncomment following line
+        //let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue()
+        bottomConstraint.constant = 260
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
     
-    
+    func keyboardWillHide(notification: NSNotification) {
+        //To retrieve keyboard size, uncomment following line
+        //let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue()
+        bottomConstraint.constant = 168
+        UIView.animate(withDuration: 0.3) {
+            self.view.layoutIfNeeded()
+        }
+    }
+*/
+
     override func viewDidLoad() {
         finishBtnlbl.layer.cornerRadius = 10
         terms.layer.cornerRadius = 10
         back.layer.cornerRadius = 10
-        
-        super.viewDidLoad()
+        //configureGradientBackground(colors: UIColor.green.cgColor, UIColor.blue.cgColor)
+
+      /*
+        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillShow:")), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
+        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillHide:")), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
+    */
+ 
       
                   //Round profile picture
         profilePic.layer.borderWidth = 1

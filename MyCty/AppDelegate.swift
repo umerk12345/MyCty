@@ -18,7 +18,26 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
         FIRApp.configure()
-        return true
+        IQKeyboardManager.sharedManager().enable = true
+        IQKeyboardManager.sharedManager().enableAutoToolbar = false
+        /*var window: UIWindow
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        var vc = UIViewController()
+        if (UserDefaults.standard.value(forKey: "name") as? String) == nil{
+            //show onboarding screen
+            vc = storyboard.instantiateViewController(withIdentifier: "OnBoardingVC")
+        }
+        else{
+            //show main screen
+            vc = storyboard.instantiateViewController(withIdentifier: "Home")
+        }
+        
+        self.window?.rootViewController = vc
+        self.window?.makeKey()
+        
+*/
+              return true
     }
 
     func applicationWillResignActive(_ application: UIApplication) {
