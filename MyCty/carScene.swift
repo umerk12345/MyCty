@@ -41,9 +41,9 @@ class carScene: SKScene {
         
         let x3Position = CGFloat(500)
         
-        blueCar.position = CGPoint(x: xPosition, y: yposition)
-        greenTruck.position = CGPoint(x: x3Position, y: y2position)
-        redCar.position = CGPoint(x : x1Position, y: yposition)
+        blueCar.position = CGPoint(x: xPosition, y: y2position)
+        greenTruck.position = CGPoint(x: x3Position, y: yposition)
+        redCar.position = CGPoint(x : x1Position, y: y2position)
         
         self.addChild(blueCar)
         self.addChild(greenTruck)
