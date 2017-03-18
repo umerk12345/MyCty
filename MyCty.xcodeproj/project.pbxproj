@@ -27,15 +27,11 @@
 		741C90291E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90171E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift */; };
 		741C902A1E7A553600E0EC3D /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 741C90191E7A553600E0EC3D /* IQKeyboardManager.bundle */; };
 		741C902D1E7B10C400E0EC3D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741C902C1E7B10C400E0EC3D /* SpriteKit.framework */; };
-		741C90311E7B2EB600E0EC3D /* Cloud.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 741C90301E7B2EB600E0EC3D /* Cloud.atlas */; };
 		741C90351E7BA17400E0EC3D /* cloudScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90341E7BA17400E0EC3D /* cloudScene.swift */; };
 		741C90371E7C0BF100E0EC3D /* carScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90361E7C0BF100E0EC3D /* carScene.swift */; };
-		741C903B1E7C116C00E0EC3D /* BlueCar.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 741C903A1E7C116C00E0EC3D /* BlueCar.atlas */; };
 		742C5C521E7904DC00553161 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742C5C511E7904DC00553161 /* Onboarding.storyboard */; };
 		742C5C541E79EEE800553161 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742C5C531E79EEE800553161 /* OnBoardingVC.swift */; };
 		742C5C561E7A087800553161 /* finalOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742C5C551E7A087800553161 /* finalOnboardingVC.swift */; };
-		7489B3E01E7C196D00DFAFC9 /* RedCar.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7489B3DF1E7C196D00DFAFC9 /* RedCar.atlas */; };
-		7489B3E21E7C19F000DFAFC9 /* GreenCar.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 7489B3E11E7C19F000DFAFC9 /* GreenCar.atlas */; };
 		7489B3E81E7CB3A900DFAFC9 /* greenCarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B3E71E7CB3A900DFAFC9 /* greenCarScene.swift */; };
 		7489B3EA1E7CB3B000DFAFC9 /* redCarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B3E91E7CB3B000DFAFC9 /* redCarScene.swift */; };
 		748E31561E74F21C00911071 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 748E31551E74F21C00911071 /* GoogleService-Info.plist */; };
@@ -72,15 +68,11 @@
 		741C90171E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		741C90191E7A553600E0EC3D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		741C902C1E7B10C400E0EC3D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		741C90301E7B2EB600E0EC3D /* Cloud.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = Cloud.atlas; sourceTree = "<group>"; };
 		741C90341E7BA17400E0EC3D /* cloudScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cloudScene.swift; sourceTree = "<group>"; };
 		741C90361E7C0BF100E0EC3D /* carScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carScene.swift; sourceTree = "<group>"; };
-		741C903A1E7C116C00E0EC3D /* BlueCar.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = BlueCar.atlas; sourceTree = "<group>"; };
 		742C5C511E7904DC00553161 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		742C5C531E79EEE800553161 /* OnBoardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		742C5C551E7A087800553161 /* finalOnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finalOnboardingVC.swift; sourceTree = "<group>"; };
-		7489B3DF1E7C196D00DFAFC9 /* RedCar.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = RedCar.atlas; sourceTree = "<group>"; };
-		7489B3E11E7C19F000DFAFC9 /* GreenCar.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = GreenCar.atlas; sourceTree = "<group>"; };
 		7489B3E71E7CB3A900DFAFC9 /* greenCarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = greenCarScene.swift; sourceTree = "<group>"; };
 		7489B3E91E7CB3B000DFAFC9 /* redCarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = redCarScene.swift; sourceTree = "<group>"; };
 		748E31551E74F21C00911071 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -192,10 +184,6 @@
 			children = (
 				74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */,
 				74F1A8351E74EFDB00EA0188 /* ViewController.swift */,
-				7489B3E11E7C19F000DFAFC9 /* GreenCar.atlas */,
-				7489B3DF1E7C196D00DFAFC9 /* RedCar.atlas */,
-				741C903A1E7C116C00E0EC3D /* BlueCar.atlas */,
-				741C90301E7B2EB600E0EC3D /* Cloud.atlas */,
 				74F1A8331E74EFB800EA0188 /* Main.storyboard */,
 				74F1A8261E74EE3E00EA0188 /* Assets.xcassets */,
 				741C90021E7A553600E0EC3D /* IQKeyboardManagerSwift */,
@@ -323,15 +311,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				741C90311E7B2EB600E0EC3D /* Cloud.atlas in Resources */,
 				74F1A82A1E74EE3E00EA0188 /* LaunchScreen.storyboard in Resources */,
-				7489B3E21E7C19F000DFAFC9 /* GreenCar.atlas in Resources */,
 				742C5C521E7904DC00553161 /* Onboarding.storyboard in Resources */,
 				741C902A1E7A553600E0EC3D /* IQKeyboardManager.bundle in Resources */,
 				748E31561E74F21C00911071 /* GoogleService-Info.plist in Resources */,
 				74F1A8271E74EE3E00EA0188 /* Assets.xcassets in Resources */,
-				7489B3E01E7C196D00DFAFC9 /* RedCar.atlas in Resources */,
-				741C903B1E7C116C00E0EC3D /* BlueCar.atlas in Resources */,
 				74F1A8341E74EFB800EA0188 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
