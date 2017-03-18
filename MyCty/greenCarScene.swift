@@ -5,7 +5,7 @@
 //  Created by Umer Khan on 3/17/17.
 //  Copyright © 2017 Umer Khan. All rights reserved.
 //
-
+/*
 import UIKit
 
 import UIKit
@@ -14,7 +14,7 @@ import GameplayKit
 
 class greenCarScene: SKScene {
     
-    var carFrames:[SKTexture]?
+    var greencarFrames:[SKTexture]?
     
     
     required init?(coder aDecoder: NSCoder) {
@@ -23,17 +23,17 @@ class greenCarScene: SKScene {
     override init(size: CGSize){
         super.init(size: size)
         self.backgroundColor = UIColor(red: 106.0/255.0, green: 106.0/255.0, blue: 106.0/255.0, alpha: 1.0)
-        var frames:[SKTexture] = []
+        var greenframes:[SKTexture] = []
         
         let BlueCarAtlas = SKTextureAtlas(named: "GreenCar")
         
         for index in 1 ... 6 {
             let textureName = "GreenCar_\(index)"
             let texture = BlueCarAtlas.textureNamed(textureName)
-            frames.append(texture)
+            greenframes.append(texture)
             
         }
-        self.carFrames = frames
+        self.greencarFrames = greenframes
         
     }
     
@@ -41,7 +41,7 @@ class greenCarScene: SKScene {
     
     
     func movingCar2(){
-        let texture = self.carFrames![0]
+        let texture = self.greencarFrames![0]
         
         let greenCar = SKSpriteNode(texture: texture)
         // let cloud1 = SKSpriteNode(texture: texture)
@@ -80,7 +80,7 @@ class greenCarScene: SKScene {
         //self.addChild(cloud2)
         //self.addChild(cloud3)
         
-        greenCar.run(SKAction.repeatForever(SKAction.animate(with: self.carFrames!, timePerFrame: 0.05, resize: false, restore: true)))
+        greenCar.run(SKAction.repeatForever(SKAction.animate(with: self.greencarFrames!, timePerFrame: 0.05, resize: false, restore: true)))
         
         var distanceToCover = self.frame.size.width + greenCar.size.width
         
@@ -125,7 +125,7 @@ class greenCarScene: SKScene {
 }
 
 
-
+*/
 
 
 

@@ -5,7 +5,7 @@
 //  Created by Umer Khan on 3/17/17.
 //  Copyright © 2017 Umer Khan. All rights reserved.
 //
-import UIKit
+/*import UIKit
 import SpriteKit
 import GameplayKit
 
@@ -125,5 +125,5 @@ class redCarScene: SKScene {
 
 
 
-
+*/
 

@@ -21,129 +21,62 @@ class carScene: SKScene {
     override init(size: CGSize){
         super.init(size: size)
         self.backgroundColor = UIColor(red: 106.0/255.0, green: 106.0/255.0, blue: 106.0/255.0, alpha: 1.0)
-        var frames:[SKTexture] = []
-        
-        let BlueCarAtlas = SKTextureAtlas(named: "BlueCar")
-        
-        for index in 1 ... 6 {
-            let textureName = "BlueCar_\(index)"
-            let texture = BlueCarAtlas.textureNamed(textureName)
-            frames.append(texture)
-            
-        
-        self.carFrames = frames
     }
-        
-         let GreenCarAtlas = SKTextureAtlas(named: "GreenCar")
-        for index in 1 ... 6 {
-            let textureName = "GreenCar_\(index)"
-            let texture2 = GreenCarAtlas.textureNamed(textureName)
-            frames.append(texture2)
-            
-        
-        self.greenFrames = frames
-        }
-
-    }
-    
-    
-    
     
     func movingCar(){
-        let texture = self.carFrames![0]
-        let texture2 = self.greenFrames![0]
-        let blueCar = SKSpriteNode(texture: texture)
-        let greenCar = SKSpriteNode(texture: texture2)
-            // let cloud1 = SKSpriteNode(texture: texture)
-        //let cloud2 = SKSpriteNode(texture: texture)
-        //let cloud3 = SKSpriteNode(texture: texture)
+      
+        let blueCar = SKSpriteNode(imageNamed: "Blue Car")
+        let redCar = SKSpriteNode(imageNamed: "Red Car")
+        let greenTruck = SKSpriteNode(imageNamed: "Green Car" )
+        
+        redCar.size = CGSize(width: 122, height: 53)
         blueCar.size = CGSize(width: 122, height: 53)
-        greenCar.size = CGSize(width: 122, height: 53)
-        //cloud1.size = CGSize(width: 64, height: 39)
-       // cloud2.size = CGSize(width: 81, height: 49)
-        //cloud3.size = CGSize(width: 64, height: 39)
-        //let CloudY = GKRandomDistribution(lowestValue: Int(Float(160.0)), highestValue: Int(Float((160.0))))
-        let yposition = CGFloat(60)
+        greenTruck.size =  CGSize(width: 160, height: 74)
         
-       // let y1position = CGFloat(150)
+        let yposition = CGFloat(50)
         let y2position = CGFloat(120)
-        //let y3position = CGFloat(150)
-        let leftToRight = arc4random() % 2 == 0
-        //let RightToLeft = arc4random() % 2 != 0
         
-        let xPosition = CGFloat(1)
-        let x1Position = CGFloat(70)
-        let x2Position = CGFloat(140)
-        let x3Position = CGFloat(200)
-        //let xPosition = leftToRight ? self.frame.size.width + cloud.size.width + cloud.size.width / 2 : -cloud.size.width / 2
+        let xPosition = CGFloat(-100)
+        let x1Position = CGFloat(-250)
+        
+        let x3Position = CGFloat(500)
         
         blueCar.position = CGPoint(x: xPosition, y: yposition)
-        greenCar.position = CGPoint(x: x2Position, y: y2position)
+        greenTruck.position = CGPoint(x: x3Position, y: y2position)
+        redCar.position = CGPoint(x : x1Position, y: yposition)
+        
+        self.addChild(blueCar)
+        self.addChild(greenTruck)
+        self.addChild(redCar)
 
-       // cloud1.position = CGPoint(x: x1Position, y: y1position)
-       // cloud2.position = CGPoint(x: x2Position, y: y2position)
-        //cloud3.position = CGPoint(x: x3Position, y: y3position)
-        //if RightToLeft {
-        // cloud.xScale = -1
-        //  }
-       
+        greenTruck.xScale = -1
         
-               //self.addChild(cloud1)
-        //self.addChild(cloud2)
-        //self.addChild(cloud3)
-        blueCar.run(SKAction.repeatForever(SKAction.animate(with: self.carFrames!, timePerFrame: 0.05, resize: false, restore: true)))
-         self.addChild(blueCar)
+        let distanceToCover = self.frame.size.width + (blueCar.size.width * 3)
+    
+        let moveAction = SKAction.moveBy(x: distanceToCover, y: 0, duration: 10.0)
         
-        //greenCar.run(SKAction.repeatForever(SKAction.animate(with: self.greenFrames!, timePerFrame: 0.05, resize: false, restore: true)))
-self.addChild(greenCar)
-        var distanceToCover = self.frame.size.width + blueCar.size.width
+        let moveToLeft = SKAction.move(to: blueCar.position, duration: 0.0)
+        let moveToLeft2 = SKAction.move(to: redCar.position, duration: 0.0)
+        let moveToRight = SKAction.move(to: greenTruck.position, duration: 0.0)
         
-        //if leftToRight{
-        //  distanceToCover += -1
+        let actualMovement = SKAction.sequence([moveAction,  moveToLeft])
+        let reverseMovement = SKAction.sequence([moveAction.reversed(), moveToRight])
+        let actualMovement2 = SKAction.sequence([moveAction,  moveToLeft2])
+
+        let endlessMovement = SKAction.repeatForever(actualMovement)
+        let endlessMovement2 = SKAction.repeatForever(reverseMovement)
+        let endlessMovement3 = SKAction.repeatForever(actualMovement2)
         
-        //}
-        
-        //let time = TimeInterval(abs(distanceToCover / 100))
-        let moveAction = SKAction.moveBy(x: distanceToCover, y: 0, duration: 20.05)
-        
-        //let finalAction = SKAction.repeatForever(moveAction)
-        
-        
-        let removeAction = SKAction.run {
-            blueCar.removeAllActions()
-            blueCar.removeFromParent()
-            greenCar.removeAllActions()
-            greenCar.removeFromParent()
-            
+        redCar.run(endlessMovement3)
+        blueCar.run(endlessMovement)
+        greenTruck.run(endlessMovement2)
+  
         }
         
-        //let repeatMove = SKAction.(moveAction)
-        
-        let actualMovement = SKAction.sequence([moveAction, removeAction])
-        //}
-        let endlessMovement = SKAction.repeatForever(actualMovement)
-        //let allActions = SKAction.repeatForever(moveAction)
-        //[moveAction, removeAction])
-        //cloud.run(moveAction)
-        blueCar.run(endlessMovement)
-        greenCar.run(endlessMovement)
-        //redCar.run(endlessMovement)
-        //cloud1.run(endlessMovement)
-        //cloud2.run(endlessMovement)
-        //cloud3.run(endlessMovement)
-        
-        
-        
-        
-        
-        
-    }
+    
+    
     
 }
-
-
-
-
 
 
 
