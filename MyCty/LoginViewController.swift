@@ -103,7 +103,7 @@ class SecondViewController: UIViewController {
     
     
     @IBAction func guestBtn(_ sender: Any) {
-        let vc = UIStoryboard(name: "Onboarding", bundle: nil).instantiateViewController(withIdentifier: "OnBoardingVC")
+        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LandingPageVC")
         present(vc, animated: true, completion: nil)
         
     }
@@ -114,7 +114,7 @@ class SecondViewController: UIViewController {
     backBtn.layer.cornerRadius = 10
     //createGradientLayer()
             
-    configureGradientBackground(colors: UIColor(red: 92.0/255.0, green: 24.0/255.0, blue: 27.0/255.0, alpha: 1.0).cgColor, UIColor(red: 245.0/255.0, green: 69.0/255.0, blue: 107.0/255.0, alpha: 1.0).cgColor)
+    configureGradientBackground(colors: UIColor(red: 132.0/255.0, green: 36.0/255.0, blue: 42.0/255.0, alpha: 1.0).cgColor, UIColor(red: 245.0/255.0, green: 69.0/255.0, blue: 107.0/255.0, alpha: 1.0).cgColor)
     
        // Do any additional setup after loading the view, typically from a nib.
     

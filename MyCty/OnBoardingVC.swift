@@ -116,7 +116,7 @@ class OnBoardingVC : UIViewController{
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             var vc = UIViewController()
             vc = storyboard.instantiateViewController(withIdentifier: "Home")
-           // x == true
+            x == true
             
             present(vc, animated: true, completion: nil)
         }

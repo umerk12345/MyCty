@@ -50,7 +50,7 @@ class OpeningViewController : UIViewController{
     
    override func viewDidLoad() {
         
-        login.layer.cornerRadius = 10
+        //login.layer.cornerRadius = 10
         signUp.layer.cornerRadius = 10
         super.viewDidLoad()
 
@@ -60,7 +60,7 @@ class OpeningViewController : UIViewController{
     self.sceneView.presentScene(scene)
     self.sceneView2.presentScene(scene2)
     
-     self.scene?.floatingCloud()
+    self.scene?.floatingCloud()
     self.scene2?.movingCar()
     
         }

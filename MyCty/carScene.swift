@@ -37,7 +37,7 @@ class carScene: SKScene {
         let y2position = CGFloat(120)
         
         let xPosition = CGFloat(-100)
-        let x1Position = CGFloat(-250)
+        let x1Position = CGFloat(-300)
         
         let x3Position = CGFloat(500)
         
@@ -49,7 +49,7 @@ class carScene: SKScene {
         self.addChild(greenTruck)
         self.addChild(redCar)
 
-        greenTruck.xScale = -1
+        greenTruck.xScale = 1
         
         let distanceToCover = self.frame.size.width + (blueCar.size.width * 3)
     

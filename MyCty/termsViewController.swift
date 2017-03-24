@@ -31,7 +31,7 @@ class termsViewController : UIViewController{
 
          backBtn.layer.cornerRadius = 10
         super.viewDidLoad()
-        configureGradientBackground(colors: UIColor.blue.cgColor, UIColor.green.cgColor)
+       // configureGradientBackground(colors: UIColor.blue.cgColor, UIColor.green.cgColor)
 
     }
 
