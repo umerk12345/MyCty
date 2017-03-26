@@ -68,7 +68,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-77-B5k">
-                                                    <rect key="frame" x="127" y="50" width="248" height="185"/>
+                                                    <rect key="frame" x="117" y="50" width="248" height="185"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dNe-H6-mbh">
                                                             <rect key="frame" x="0.0" y="17" width="170" height="20"/>
@@ -146,7 +146,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4d0-Aa-QBq">
-                                                    <rect key="frame" x="95" y="142" width="30" height="1"/>
+                                                    <rect key="frame" x="95" y="142" width="20" height="1"/>
                                                     <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="1" id="UJM-nL-FXb"/>
@@ -167,19 +167,19 @@
                                                 <constraint firstItem="BKo-zV-quY" firstAttribute="leading" secondItem="qpf-ag-8dF" secondAttribute="leadingMargin" constant="47" id="3ez-mI-Yiz"/>
                                                 <constraint firstItem="4d0-Aa-QBq" firstAttribute="leading" secondItem="3zt-iK-2Kh" secondAttribute="trailing" constant="2" id="3op-zD-Mip"/>
                                                 <constraint firstAttribute="bottom" secondItem="Hfn-77-B5k" secondAttribute="bottom" id="5Aq-Nl-wyy"/>
-                                                <constraint firstItem="Hfn-77-B5k" firstAttribute="leading" secondItem="3zt-iK-2Kh" secondAttribute="trailing" constant="34" id="68J-xT-xqL"/>
+                                                <constraint firstItem="Hfn-77-B5k" firstAttribute="leading" secondItem="3zt-iK-2Kh" secondAttribute="trailing" constant="24" id="68J-xT-xqL"/>
                                                 <constraint firstItem="BKo-zV-quY" firstAttribute="top" secondItem="3zt-iK-2Kh" secondAttribute="bottom" constant="2" id="BHk-no-oQV"/>
                                                 <constraint firstAttribute="bottom" secondItem="Hfn-77-B5k" secondAttribute="bottom" id="O2l-34-tLu"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="3zt-iK-2Kh" secondAttribute="bottom" constant="52" id="OnS-yb-IVc"/>
                                                 <constraint firstItem="BKo-zV-quY" firstAttribute="bottom" secondItem="qpf-ag-8dF" secondAttribute="bottomMargin" constant="2" id="RPJ-bV-bSG"/>
                                                 <constraint firstItem="Hfn-77-B5k" firstAttribute="leading" secondItem="4d0-Aa-QBq" secondAttribute="trailing" constant="2" id="atD-Ut-14y"/>
                                                 <constraint firstItem="Hfn-77-B5k" firstAttribute="top" secondItem="qpf-ag-8dF" secondAttribute="top" constant="50" id="bRW-em-Hyb"/>
-                                                <constraint firstAttribute="trailing" secondItem="Hfn-77-B5k" secondAttribute="trailing" id="lA3-iM-xhY"/>
-                                                <constraint firstAttribute="trailing" secondItem="Hfn-77-B5k" secondAttribute="trailing" id="xa5-f2-ToZ"/>
+                                                <constraint firstAttribute="trailing" secondItem="Hfn-77-B5k" secondAttribute="trailing" constant="10" id="xa5-f2-ToZ"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="bigDateLabel" destination="7bq-PH-5u8" id="ZAI-fN-z4T"/>
+                                            <outlet property="blueView" destination="Hfn-77-B5k" id="RK2-cg-PNr"/>
                                             <outlet property="categoryLabel" destination="dNe-H6-mbh" id="WCR-lS-ajt"/>
                                             <outlet property="descriptionLabel" destination="eO3-v6-JxL" id="apP-zb-hDl"/>
                                             <outlet property="smallDateLabel" destination="KWW-pb-4ot" id="Nmp-IM-Ev3"/>
@@ -223,10 +223,10 @@
                                 <state key="normal" title="Button" image="Menu"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyCTY Logo" translatesAutoresizingMaskIntoConstraints="NO" id="eM2-7T-0DT">
-                                <rect key="frame" x="129" y="19" width="117" height="37"/>
+                                <rect key="frame" x="137.5" y="19" width="100" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="DRd-Zs-9xW"/>
-                                    <constraint firstAttribute="width" constant="117" id="aok-ek-UfU"/>
+                                    <constraint firstAttribute="width" constant="100" id="aok-ek-UfU"/>
                                 </constraints>
                             </imageView>
                         </subviews>
@@ -571,6 +571,6 @@
         <image name="add" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="DOU-OM-VaU"/>
+        <segue reference="Rmi-NP-m17"/>
     </inferredMetricsTieBreakers>
 </document>
