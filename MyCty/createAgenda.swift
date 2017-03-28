@@ -9,6 +9,9 @@
 import UIKit
 import Social
 import MobileCoreServices
+import FirebaseDatabase
+import Firebase
+import FirebaseAuth
 
 class AgendaDetailVC: UIViewController, UITextFieldDelegate{
     
@@ -28,8 +31,12 @@ class AgendaDetailVC: UIViewController, UITextFieldDelegate{
     
     @IBAction func createAgenda(_ sender: Any) {
         
+        ref = FIRDatabase.database().reference()
+        var handle:FIRDatabaseHandle?
+        
        
         if categoryTextField.text != "" && descriptionField.text != "" && timeTextField.text != "" && dateTextField.text != "" {
+            
             
             
             agenda[0][0] = categoryTextField.text!

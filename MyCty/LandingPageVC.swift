@@ -24,11 +24,11 @@ class LandingPageVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCustomTableViewCell
 
-         cell.categoryLabel.text! =  agenda[0][0]
-      cell.descriptionLabel.text! = agenda[0][1]
-        cell.time.text! = agenda[0][2]
-            cell.bigDateLabel.text! = agenda[0][3]
-          cell.smallDateLabel.text! = agenda[0][3]
+    cell.categoryLabel.text! =  agenda[0][0]
+    cell.descriptionLabel.text! = agenda[0][1]
+    cell.time.text! = agenda[0][2]
+    cell.bigDateLabel.text! = agenda[0][3]
+    cell.smallDateLabel.text! = agenda[0][3]
         
     return (cell)
 }
