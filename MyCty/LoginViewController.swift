@@ -69,8 +69,9 @@ class SecondViewController: UIViewController {
                         self.present(alertController, animated: true, completion: nil)
                     }
                         else {
-                   self.performSegue(withIdentifier: "loginToHome", sender: self)
-                        }
+                        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LandingPageVC")
+                        self.present(vc, animated: true, completion: nil)
+                    }
  
                 })
         

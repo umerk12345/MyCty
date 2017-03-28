@@ -21,8 +21,7 @@ class termsViewController : UIViewController{
  
      termsView.layer.cornerRadius = 10
         super.viewDidLoad()
-       // configureGradientBackground(colors: UIColor.blue.cgColor, UIColor.green.cgColor)
-
+      
     }
 
 }

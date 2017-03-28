@@ -7,6 +7,9 @@
 //
 
 
+//IGNORE THIS FILE MADE ONLY FOR DEBUGGING
+
+
 import UIKit
 import FirebaseAuth
 import Firebase

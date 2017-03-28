@@ -22,9 +22,44 @@ class MyCustomTableViewCell: UITableViewCell{
     
     @IBOutlet weak var smallDateView: UIView!
     @IBOutlet weak var blueView: UIView!
+    /*
+    
+    var post: Post! {
+        didSet {
+            self.updateUI()
+        }
+    }
+    
+    func updateUI()
+    {
+        categoryLabel.text = post.category
+        descriptionLabel.text = post.description
+        time.text = post.time
+        bigDateLabel.text = post.date
+        smallDateLabel.text = post.date
+       /* postImageView.image = post.image
+        postStatsLabel.text = "\(post.numberOfLikes!) Likes     \(post.numberOfComments!) Comments     \(post.numberOfShares!) Shares"
+ */
+    }
+    
+    
+    
+*/
+
+        
+    
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        
+        
+        
+        // Initialization code
+    
+        
+        
+        
+        
         
         blueView.layer.cornerRadius = 10
         
@@ -40,6 +75,7 @@ class MyCustomTableViewCell: UITableViewCell{
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-           }
+        // Configure the view for the selected state
+    }
     
 }

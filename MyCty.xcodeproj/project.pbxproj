@@ -34,8 +34,6 @@
 		742C5C561E7A087800553161 /* finalOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742C5C551E7A087800553161 /* finalOnboardingVC.swift */; };
 		745EBD741E8355960022664D /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745EBD731E8355960022664D /* TableViewCell.swift */; };
 		745EBD761E8359CB0022664D /* LandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745EBD751E8359CB0022664D /* LandingPageVC.swift */; };
-		7489B3E81E7CB3A900DFAFC9 /* greenCarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B3E71E7CB3A900DFAFC9 /* greenCarScene.swift */; };
-		7489B3EA1E7CB3B000DFAFC9 /* redCarScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B3E91E7CB3B000DFAFC9 /* redCarScene.swift */; };
 		7489B3EC1E7DF31A00DFAFC9 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B3EB1E7DF31A00DFAFC9 /* Onboarding.swift */; };
 		7489B3EF1E80F18B00DFAFC9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7489B3EE1E80F18B00DFAFC9 /* Home.storyboard */; };
 		748E31561E74F21C00911071 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 748E31551E74F21C00911071 /* GoogleService-Info.plist */; };
@@ -81,8 +79,6 @@
 		742C5C551E7A087800553161 /* finalOnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finalOnboardingVC.swift; sourceTree = "<group>"; };
 		745EBD731E8355960022664D /* TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		745EBD751E8359CB0022664D /* LandingPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageVC.swift; sourceTree = "<group>"; };
-		7489B3E71E7CB3A900DFAFC9 /* greenCarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = greenCarScene.swift; sourceTree = "<group>"; };
-		7489B3E91E7CB3B000DFAFC9 /* redCarScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = redCarScene.swift; sourceTree = "<group>"; };
 		7489B3EB1E7DF31A00DFAFC9 /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		7489B3EE1E80F18B00DFAFC9 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		748E31551E74F21C00911071 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -214,9 +210,7 @@
 				741C90021E7A553600E0EC3D /* IQKeyboardManagerSwift */,
 				74F1A8281E74EE3E00EA0188 /* LaunchScreen.storyboard */,
 				748E31551E74F21C00911071 /* GoogleService-Info.plist */,
-				7489B3E71E7CB3A900DFAFC9 /* greenCarScene.swift */,
 				74F1A8371E74EFE300EA0188 /* LoginViewController.swift */,
-				7489B3E91E7CB3B000DFAFC9 /* redCarScene.swift */,
 				74F1A82B1E74EE3E00EA0188 /* Info.plist */,
 				748E315B1E750B5500911071 /* HomePageController.swift */,
 				748E315D1E7642BA00911071 /* forgotPasswordController.swift */,
@@ -420,7 +414,6 @@
 				74F1A8381E74EFE300EA0188 /* LoginViewController.swift in Sources */,
 				741C90291E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift in Sources */,
 				74DD65141E838FF800697175 /* createAgenda.swift in Sources */,
-				7489B3EA1E7CB3B000DFAFC9 /* redCarScene.swift in Sources */,
 				741C901D1E7A553600E0EC3D /* IQUIView+Hierarchy.swift in Sources */,
 				748E315C1E750B5500911071 /* HomePageController.swift in Sources */,
 				741C901A1E7A553600E0EC3D /* IQNSArray+Sort.swift in Sources */,
@@ -435,7 +428,6 @@
 				741C90211E7A553600E0EC3D /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				741C90281E7A553600E0EC3D /* IQToolbar.swift in Sources */,
 				74DD651E1E873B3D00697175 /* Agenda.swift in Sources */,
-				7489B3E81E7CB3A900DFAFC9 /* greenCarScene.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -17,21 +17,7 @@ extension Timer {
         return timer
     }
 }
-    /*
-extension SKAction {
-    
-    static func repeatAction(action:SKAction,interval:TimeInterval) -> SKAction {
-        
-        // diff between interval and action.duration will be the wait time. This makes interval the interval between action starts. Max of 0 and diff to make sure it isn't smaller than 0
-        let waitAction = SKAction.wait(forDuration: max(0,interval - action.duration))
-        let sequenceAction = SKAction.sequence([waitAction,action])
-        let repeatAction = SKAction.repeatForever(sequenceAction)
-        
-        return repeatAction
-        
-    }
-}
-*/
+
 class OpeningViewController : UIViewController{
     
    

@@ -112,11 +112,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user: FIRUser?, error) in
                 
                     if error == nil {
-                       /* let successController = UIAlertController(title: "Success", message: "You have successfully signed up", preferredStyle: .alert)
-                        let defaultActionSuccess = UIAlertAction(title: "OK", style: .cancel, handler: nil)
-                        successController.addAction(defaultActionSuccess)
-                        self.present(successController, animated: true, completion: nil)
- */                     //self.performSegue(withIdentifier: "termsandConditions", sender: self)
                         self.usernameLbl.text = username
                     }
                     else{
@@ -231,26 +226,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         self.dismiss(animated: true, completion: nil)
     }
     
-    //make the profile pic round
-        
-
-  /*  func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        
-        if let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        {
-        profilePic.image = image
-           
-    }
-            
-        else{
-            //Error message
-        }
-        self.dismiss(animated: true, completion: nil)
-    }
- */
-     //make the profile pic round
- 
-    func configureGradientBackground(colors:CGColor...){
+        func configureGradientBackground(colors:CGColor...){
         
         let gradient: CAGradientLayer = CAGradientLayer()
         //let maxWidth = max(self.view.bounds.size.height,self.view.bounds.size.width)
@@ -279,39 +255,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         }
         return true
     }    
-    /*
-    func keyboardWillShow(notification: NSNotification) {
-        //To retrieve keyboard size, uncomment following line
-        //let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue()
-        bottomConstraint.constant = 260
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-    }
-    
-    func keyboardWillHide(notification: NSNotification) {
-        //To retrieve keyboard size, uncomment following line
-        //let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue()
-        bottomConstraint.constant = 168
-        UIView.animate(withDuration: 0.3) {
-            self.view.layoutIfNeeded()
-        }
-    }
-*/
-
-    override func viewDidLoad() {
+       override func viewDidLoad() {
         finishBtnlbl.layer.cornerRadius = 10
         terms.layer.cornerRadius = 10
         back.layer.cornerRadius = 10
-        //configureGradientBackground(colors: UIColor.green.cgColor, UIColor.blue.cgColor)
-
-      /*
-        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillShow:")), name:NSNotification.Name.UIKeyboardWillShow, object: nil);
-        NotificationCenter.default.addObserver(self, selector: Selector(("keyboardWillHide:")), name:NSNotification.Name.UIKeyboardWillHide, object: nil);
-    */
- 
-      
-                  //Round profile picture
+        
+        //Round profile picture
         profilePic.layer.borderWidth = 1
         profilePic.layer.masksToBounds = false
         
