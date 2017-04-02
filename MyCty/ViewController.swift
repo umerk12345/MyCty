@@ -24,7 +24,7 @@ var ref:FIRDatabaseReference?
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
     @IBOutlet weak var back: UIButton!
    
-    @IBOutlet weak var terms: UIButton!
+    //@IBOutlet weak var terms: UIButton!
 
     @IBOutlet weak var profilePic: UIImageView!
     
@@ -39,6 +39,15 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
        var ref:FIRDatabaseReference?
     var handle:FIRDatabaseHandle?
+    
+    @IBAction func termsButton(_ sender: Any) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "termsView")
+        present(vc, animated: true, completion: nil)
+        
+
+    }
+   
+   
  
     @IBAction func backBtn(_ sender: Any) {
         performSegue(withIdentifier: "Back", sender: self)
@@ -257,8 +266,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }    
        override func viewDidLoad() {
         finishBtnlbl.layer.cornerRadius = 10
-        terms.layer.cornerRadius = 10
-        back.layer.cornerRadius = 10
+       
         
         //Round profile picture
         profilePic.layer.borderWidth = 1
