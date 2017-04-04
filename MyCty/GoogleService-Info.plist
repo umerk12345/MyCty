@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>990806140426-fg2e7p905crp3r4jemqcrhs6nsnj602q.apps.googleusercontent.com</string>
+	<string>780667895933-9kmnco042adf4jba2sb702r7o1sa3r15.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.990806140426-fg2e7p905crp3r4jemqcrhs6nsnj602q</string>
+	<string>com.googleusercontent.apps.780667895933-9kmnco042adf4jba2sb702r7o1sa3r15</string>
 	<key>API_KEY</key>
-	<string>AIzaSyChtT461_0mjDDaB-CbLklmHXEWAD8aGcI</string>
+	<string>AIzaSyAcXe-OQfQawA7CQbhCsCPD_5tI3rIYy9U</string>
 	<key>GCM_SENDER_ID</key>
-	<string>990806140426</string>
+	<string>780667895933</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>MyCty</string>
+	<string>Ukhan.MyCty</string>
 	<key>PROJECT_ID</key>
-	<string>mycty-bc2ab</string>
+	<string>mycty-1</string>
 	<key>STORAGE_BUCKET</key>
-	<string>mycty-bc2ab.appspot.com</string>
+	<string>mycty-1.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true/>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true/>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:990806140426:ios:e5790bf7329da4e1</string>
+	<string>1:780667895933:ios:b4664efd9f0f75b7</string>
 	<key>DATABASE_URL</key>
-	<string>https://mycty-bc2ab.firebaseio.com</string>
+	<string>https://mycty-1.firebaseio.com</string>
 </dict>
 </plist>

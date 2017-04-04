@@ -36,12 +36,12 @@
 		745EBD761E8359CB0022664D /* LandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745EBD751E8359CB0022664D /* LandingPageVC.swift */; };
 		7489B3EC1E7DF31A00DFAFC9 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B3EB1E7DF31A00DFAFC9 /* Onboarding.swift */; };
 		7489B3EF1E80F18B00DFAFC9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7489B3EE1E80F18B00DFAFC9 /* Home.storyboard */; };
-		748E31561E74F21C00911071 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 748E31551E74F21C00911071 /* GoogleService-Info.plist */; };
 		748E315C1E750B5500911071 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E315B1E750B5500911071 /* HomePageController.swift */; };
 		748E315E1E7642BA00911071 /* forgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E315D1E7642BA00911071 /* forgotPasswordController.swift */; };
 		748E31601E764E8200911071 /* termsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E315F1E764E8200911071 /* termsViewController.swift */; };
 		74DD65141E838FF800697175 /* createAgenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD65131E838FF800697175 /* createAgenda.swift */; };
 		74DD651E1E873B3D00697175 /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD651D1E873B3D00697175 /* Agenda.swift */; };
+		74DD65841E93278200697175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74DD65831E93278200697175 /* GoogleService-Info.plist */; };
 		74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */; };
 		74F1A8271E74EE3E00EA0188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8261E74EE3E00EA0188 /* Assets.xcassets */; };
 		74F1A82A1E74EE3E00EA0188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8281E74EE3E00EA0188 /* LaunchScreen.storyboard */; };
@@ -81,12 +81,12 @@
 		745EBD751E8359CB0022664D /* LandingPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageVC.swift; sourceTree = "<group>"; };
 		7489B3EB1E7DF31A00DFAFC9 /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		7489B3EE1E80F18B00DFAFC9 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		748E31551E74F21C00911071 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		748E315B1E750B5500911071 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		748E315D1E7642BA00911071 /* forgotPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = forgotPasswordController.swift; sourceTree = "<group>"; };
 		748E315F1E764E8200911071 /* termsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsViewController.swift; sourceTree = "<group>"; };
 		74DD65131E838FF800697175 /* createAgenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAgenda.swift; sourceTree = "<group>"; };
 		74DD651D1E873B3D00697175 /* Agenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
+		74DD65831E93278200697175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74F1A81C1E74EE3E00EA0188 /* MyCty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F1A8261E74EE3E00EA0188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -209,8 +209,8 @@
 				74F1A8261E74EE3E00EA0188 /* Assets.xcassets */,
 				741C90021E7A553600E0EC3D /* IQKeyboardManagerSwift */,
 				74F1A8281E74EE3E00EA0188 /* LaunchScreen.storyboard */,
-				748E31551E74F21C00911071 /* GoogleService-Info.plist */,
 				74F1A8371E74EFE300EA0188 /* LoginViewController.swift */,
+				74DD65831E93278200697175 /* GoogleService-Info.plist */,
 				74F1A82B1E74EE3E00EA0188 /* Info.plist */,
 				748E315B1E750B5500911071 /* HomePageController.swift */,
 				748E315D1E7642BA00911071 /* forgotPasswordController.swift */,
@@ -335,9 +335,9 @@
 				74F1A82A1E74EE3E00EA0188 /* LaunchScreen.storyboard in Resources */,
 				742C5C521E7904DC00553161 /* Onboarding.storyboard in Resources */,
 				741C902A1E7A553600E0EC3D /* IQKeyboardManager.bundle in Resources */,
-				748E31561E74F21C00911071 /* GoogleService-Info.plist in Resources */,
 				74F1A8271E74EE3E00EA0188 /* Assets.xcassets in Resources */,
 				74F1A8341E74EFB800EA0188 /* Main.storyboard in Resources */,
+				74DD65841E93278200697175 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

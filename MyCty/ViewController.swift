@@ -30,7 +30,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     
     @IBOutlet weak var finishBtnlbl: UIButton!
 
-    @IBOutlet weak var usernameLbl: UILabel!
+  //  @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var usernameTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
@@ -121,7 +121,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user: FIRUser?, error) in
                 
                     if error == nil {
-                        self.usernameLbl.text = username
+                       // self.usernameLbl.text = username
                     }
                     else{
                         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -150,7 +150,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                             
                             if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
                                 
-                                  let ref = FIRDatabase.database().reference(fromURL: "https://mycty-bc2ab.firebaseio.com/")
+                                  let ref = FIRDatabase.database().reference(fromURL: "https://mycty-1.firebaseio.com/")
                                 let values = ["Username" : username, "Email": email, "Password" :password, "Phone Number": phonenumber, "profileImageUrl": profileImageUrl]
                               
                                 let userReference = ref.child("Users").child(uid)
@@ -180,7 +180,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
  */
                         })
                     }
-                    self.performSegue(withIdentifier: "signinToHome", sender: self)
+                 //   self.performSegue(withIdentifier: "signinToHome", sender: self)
 
                 }
             }
