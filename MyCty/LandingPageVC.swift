@@ -8,58 +8,74 @@
 
 
 import UIKit
-var agenda: [[String]] = [["", "", "", ""]]
+import Firebase
 
+
+  //var agenda: [[String]] = [["", "", "", ""]]
 class LandingPageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    //MARK: Variables & Oulets
     @IBOutlet weak var navBar: UINavigationBar!
-    
     @IBOutlet weak var myTableView: UITableView!
+    var testingKey = "237895837hfjskdlfjkld3" //only used for testing - need user key
+    var agenda = [Agenda]()
     
-    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int
-    {
-        return (agenda.count-1)
+    //TODO: Setup user in Userdefaults or keychain to be used in Firebase query
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        myTableView.dataSource = self
+        myTableView.delegate = self
+    
+        navBar.barTintColor = UIColor(red: 132.0/255.0, green: 36.0/255.0, blue: 42.0/255.0, alpha: 1.0)
         
+        //retrieve Firebase Data
+        DataService.ds.Ref_Agendas.observe(.value, with: { snap in
+            if let snap = snap.children.allObjects as? [FIRDataSnapshot] {
+                for agendas in snap {
+                    if let agendasDict = agendas.value as? Dictionary<String,AnyObject> {
+                        if let data = agendasDict[self.testingKey] as? Dictionary<String,AnyObject> {
+                            let newAgendas = Agenda(key: agendas.key, data: data)
+                            self.agenda.append(newAgendas)
+                        }
+                    }
+                }
             }
-    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell
-    {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! MyCustomTableViewCell
-
-    cell.categoryLabel.text! =  agenda[0][0]
-    cell.descriptionLabel.text! = agenda[0][1]
-    cell.time.text! = agenda[0][2]
-    cell.bigDateLabel.text! = agenda[0][3]
-    cell.smallDateLabel.text! = agenda[0][3]
-        
-    return (cell)
-}
+        })
+    }
     
-   
-        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath)
-    {
-        if editingStyle == UITableViewCellEditingStyle.delete
-       {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    
+     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return agenda.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let agendas = agenda[indexPath.row]
+        
+        if let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyCustomTableViewCell {
+            cell.configureCell(agendaData: agendas)
+            return cell
+        } else {
+            let cell = MyCustomTableViewCell()
+            cell.configureCell(agendaData: agendas)
+            return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
             agenda.remove(at: indexPath.row)
             myTableView.reloadData()
         }
     }
-        override func viewDidAppear(_ animated: Bool) {
-  
+    
+    override func viewDidAppear(_ animated: Bool) {
         myTableView.reloadData()
-        
     }
 
-        
-        
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-                navBar.barTintColor = UIColor(red: 132.0/255.0, green: 36.0/255.0, blue: 42.0/255.0, alpha: 1.0)
-        }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-            }
-    
     //override var prefersStatusBarHidden: Bool {
      //   return true
    // }

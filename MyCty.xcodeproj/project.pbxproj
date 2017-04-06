@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D8E6B058AA9E76AD01C1ABA /* Pods_MyCty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B5BF96DC3E69C16C4A726E /* Pods_MyCty.framework */; };
+		23ED4D5C1E95E44F00718FE5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED4D5B1E95E44F00718FE5 /* DataService.swift */; };
 		741C90011E7A213400E0EC3D /* OpeningPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90001E7A213400E0EC3D /* OpeningPageVC.swift */; };
 		741C901A1E7A553600E0EC3D /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90041E7A553600E0EC3D /* IQNSArray+Sort.swift */; };
 		741C901B1E7A553600E0EC3D /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90051E7A553600E0EC3D /* IQUIScrollView+Additions.swift */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23ED4D5B1E95E44F00718FE5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		5CDD8FE7E90576C253045835 /* Pods-MyCty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCty/Pods-MyCty.debug.xcconfig"; sourceTree = "<group>"; };
 		741C90001E7A213400E0EC3D /* OpeningPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningPageVC.swift; sourceTree = "<group>"; };
 		741C90041E7A553600E0EC3D /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
@@ -196,6 +198,7 @@
 				74DD651D1E873B3D00697175 /* Agenda.swift */,
 				745EBD731E8355960022664D /* TableViewCell.swift */,
 				745EBD751E8359CB0022664D /* LandingPageVC.swift */,
+				23ED4D5B1E95E44F00718FE5 /* DataService.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				748E315E1E7642BA00911071 /* forgotPasswordController.swift in Sources */,
 				741C90351E7BA17400E0EC3D /* cloudScene.swift in Sources */,
 				74F1A8361E74EFDB00EA0188 /* ViewController.swift in Sources */,
+				23ED4D5C1E95E44F00718FE5 /* DataService.swift in Sources */,
 				741C90231E7A553600E0EC3D /* IQKeyboardReturnKeyHandler.swift in Sources */,
 				74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */,
 				741C90211E7A553600E0EC3D /* IQKeyboardManagerConstantsInternal.swift in Sources */,
