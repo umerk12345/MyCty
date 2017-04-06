@@ -39,14 +39,14 @@ class AgendaDetailVC: UIViewController, UITextFieldDelegate{
             
             
             
-            agenda[0][0] = categoryTextField.text!
-            agenda[0][1] = descriptionField.text!
-            agenda[0][2] = timeTextField.text!
-            agenda[0][3] = dateTextField.text!
+           // agenda[0][0] = categoryTextField.text!
+           // agenda[0][1] = descriptionField.text!
+           // agenda[0][2] = timeTextField.text!
+           // agenda[0][3] = dateTextField.text!
             
             
-            let createdAgenda = [agenda[0][0], agenda[0][1], agenda[0][2], agenda[0][3]]
-          agenda.append(createdAgenda)
+            //let createdAgenda = [agenda[0][0], agenda[0][1], agenda[0][2], agenda[0][3]]
+          //agenda.append(createdAgenda)
             
            
     
