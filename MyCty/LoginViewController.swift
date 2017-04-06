@@ -43,9 +43,6 @@ class SecondViewController: UIViewController {
     @IBAction func loginBtn(_ sender: Any) {
  
         if self.emailLoginTxt.text == "" || self.passwordLoginTxt.text == "" {
-            
-            //Alert to tell the user that there was an error because they didn't fill anything in the textfields because they didn't fill anything in
-            
             let alertController = UIAlertController(title: "Error", message: "Please complete the fields", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -76,21 +73,7 @@ class SecondViewController: UIViewController {
                 })
         
     }
-   
-    
-   // var gradientLayer: CAGradientLayer!
-  
-    /*
-    func createGradientLayer() {
-        gradientLayer = CAGradientLayer()
-        
-        gradientLayer.frame = self.view.bounds
-        
-       gradientLayer.colors = [UIColor(red: 92.0/255.0, green: 24.0/255.0, blue: 27.0/255.0, alpha: 1.0).cgColor, UIColor(red: 245.0/255.0, green: 69.0/255.0, blue: 107.0/255.0, alpha: 1.0).cgColor]
-        self.view.layer.addSublayer(gradientLayer)
-    }
-    */
-    func configureGradientBackground(colors:CGColor...){
+      func configureGradientBackground(colors:CGColor...){
         
         let gradient: CAGradientLayer = CAGradientLayer()
        // let maxWidth = max(self.view.bounds.size.height,self.view.bounds.size.width)
@@ -109,7 +92,7 @@ class SecondViewController: UIViewController {
         
     }
       
-        override func viewDidLoad() {
+    override func viewDidLoad() {
     super.viewDidLoad()
     loginBtnLbl.layer.cornerRadius = 10
     backBtn.layer.cornerRadius = 10

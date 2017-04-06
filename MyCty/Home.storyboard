@@ -64,7 +64,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="236"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJI-Sa-7Xn" id="qpf-ag-8dF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="235.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-77-B5k">
@@ -334,6 +334,16 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8bd-ts-Okh">
+                                <rect key="frame" x="16" y="617" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Xij-M3-mHb"/>
+                                    <constraint firstAttribute="width" constant="46" id="owk-2b-7Op"/>
+                                </constraints>
+                                <state key="normal" title="Back">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.2666666667" green="1" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -344,6 +354,7 @@
                             <constraint firstItem="ewU-Pw-s2j" firstAttribute="leading" secondItem="aTE-j6-MFf" secondAttribute="leadingMargin" constant="28" id="5U4-pW-VNi"/>
                             <constraint firstAttribute="trailingMargin" secondItem="aLG-UO-mqW" secondAttribute="trailing" constant="29" id="8Xn-gF-Yxj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="5Lq-P3-r5K" secondAttribute="trailing" constant="29" id="8YX-S5-hur"/>
+                            <constraint firstItem="y44-BB-TmW" firstAttribute="top" secondItem="8bd-ts-Okh" secondAttribute="bottom" constant="20" id="Aj4-RY-TOp"/>
                             <constraint firstAttribute="trailingMargin" secondItem="lk2-Do-YgH" secondAttribute="trailing" constant="29" id="B9r-HE-Kun"/>
                             <constraint firstItem="YZr-Iy-lAt" firstAttribute="leading" secondItem="aTE-j6-MFf" secondAttribute="leadingMargin" id="HyB-Xe-OIv"/>
                             <constraint firstItem="lk2-Do-YgH" firstAttribute="leading" secondItem="aTE-j6-MFf" secondAttribute="leadingMargin" constant="28" id="LNM-lv-PES"/>
@@ -363,6 +374,7 @@
                             <constraint firstItem="m9D-Ug-DfT" firstAttribute="top" secondItem="9ve-S7-0Pv" secondAttribute="bottom" constant="20" id="jKu-GO-rQj"/>
                             <constraint firstAttribute="trailingMargin" secondItem="meh-Gu-IQs" secondAttribute="trailing" constant="29" id="kIk-H2-kHt"/>
                             <constraint firstItem="9ve-S7-0Pv" firstAttribute="top" secondItem="YZr-Iy-lAt" secondAttribute="bottom" constant="8" id="maB-bG-cAp"/>
+                            <constraint firstItem="8bd-ts-Okh" firstAttribute="leading" secondItem="aTE-j6-MFf" secondAttribute="leadingMargin" id="npB-pR-9JG"/>
                             <constraint firstItem="9ve-S7-0Pv" firstAttribute="trailing" secondItem="aTE-j6-MFf" secondAttribute="trailingMargin" id="rpw-0e-Fbn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="6ll-mC-Y4x" secondAttribute="trailing" constant="28" id="sqn-Xh-JRO"/>
                             <constraint firstItem="6ll-mC-Y4x" firstAttribute="leading" secondItem="aTE-j6-MFf" secondAttribute="leadingMargin" constant="28" id="xfg-fb-krw"/>

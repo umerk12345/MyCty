@@ -25,15 +25,11 @@ class OpeningViewController : UIViewController{
     
    
     @IBOutlet weak var emailLoginTxt: UITextField!
-
     @IBOutlet weak var passwordLoginTxt: UITextField!
     @IBOutlet weak var sceneView: SKView!
-
     @IBOutlet weak var sceneView2: SKView!
-  
     @IBOutlet weak var sceneView3: SKView!
     @IBOutlet weak var login: UIButton!
-    
     @IBOutlet weak var signUp: UIButton!
     
     var scene:cloudScene?
@@ -50,9 +46,6 @@ class OpeningViewController : UIViewController{
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OpeningView")
         present(vc, animated: true, completion: nil)
     }
-    
-    
-    
     
     @IBAction func loginBtn(_ sender: Any) {
         
@@ -88,10 +81,6 @@ class OpeningViewController : UIViewController{
             }
             
         })
-        
-    
-
-    
     
     }
 

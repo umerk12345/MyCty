@@ -5,10 +5,7 @@
 //  Created by Brandon Ellis and Umer Khan on 3/6/17.
 //  Copyright © 2017 Brandon Ellis , Umer Khan. All rights reserved.
 //
-var username = ""
-var email = ""
-var phonenumber = ""
-var password = ""
+
 
 //var usernameTxtField: UITextField!
 //var passwordTxtField: UITextField!
@@ -23,43 +20,40 @@ var ref:FIRDatabaseReference?
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate,UITextFieldDelegate {
     @IBOutlet weak var back: UIButton!
-   
-    //@IBOutlet weak var terms: UIButton!
-
-    @IBOutlet weak var profilePic: UIImageView!
     
+    var username = ""
+    var email = ""
+    var phonenumber = ""
+    var password = ""
+    
+    @IBOutlet weak var profilePic: UIImageView!
     @IBOutlet weak var finishBtnlbl: UIButton!
-
-  //  @IBOutlet weak var usernameLbl: UILabel!
     @IBOutlet weak var emailTxtField: UITextField!
     @IBOutlet weak var usernameTxtField: UITextField!
     @IBOutlet weak var passwordTxtField: UITextField!
     @IBOutlet weak var retypePassTxtField: UITextField!
     @IBOutlet weak var phoneNumberTxtField: UITextField!
     
-       var ref:FIRDatabaseReference?
+    var ref:FIRDatabaseReference?
     var handle:FIRDatabaseHandle?
     
     @IBAction func termsButton(_ sender: Any) {
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "termsView")
         present(vc, animated: true, completion: nil)
-        
-
+    
     }
    
-   
- 
     @IBAction func backBtn(_ sender: Any) {
         performSegue(withIdentifier: "Back", sender: self)
+    
     }
  
+    
     @IBAction func finishBtn(_ sender: Any) {
  
         ref = FIRDatabase.database().reference()
         var handle:FIRDatabaseHandle?
  
- 
-        // if a single field is empty
         if emailTxtField.text == "" || passwordTxtField.text == "" || retypePassTxtField.text == "" || phoneNumberTxtField.text == "" || usernameTxtField.text == "" {
             let alertController = UIAlertController(title: "Error", message: "Please complete all the fields", preferredStyle: .alert)
  
@@ -69,8 +63,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             present(alertController, animated: true, completion: nil)
         }
         
-        //if password do not match
-        if passwordTxtField.text != retypePassTxtField.text  {
+        if passwordTxtField.text != retypePassTxtField.text {
             let alertController = UIAlertController(title: "Error", message: "Passwords do not match", preferredStyle: .alert)
             
             let defaultAction = UIAlertAction(title: "OK", style: .cancel, handler: nil)
@@ -97,7 +90,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
 
         }
         
-        //If everything is filled and no errors, sign up
     if usernameTxtField.text != "" && emailTxtField.text != "" && passwordTxtField.text != "" && retypePassTxtField.text != "" && phoneNumberTxtField.text != "" && passwordTxtField.text == retypePassTxtField.text{
         
         username = self.usernameTxtField.text!
@@ -118,10 +110,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                 self.present(alertController, animated: true, completion: nil)
             }
             else{
-                FIRAuth.auth()?.createUser(withEmail: email, password: password) { (user: FIRUser?, error) in
+                FIRAuth.auth()?.createUser(withEmail: self.email, password: self.password) { (user: FIRUser?, error) in
                 
                     if error == nil {
-                       // self.usernameLbl.text = username
+                     
                     }
                     else{
                         let alertController = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
@@ -151,7 +143,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                             if let profileImageUrl = metadata?.downloadURL()?.absoluteString {
                                 
                                   let ref = FIRDatabase.database().reference(fromURL: "https://mycty-1.firebaseio.com/")
-                                let values = ["Username" : username, "Email": email, "Password" :password, "Phone Number": phonenumber, "profileImageUrl": profileImageUrl]
+                                let values = ["Username" : self.username, "Email": self.email, "Password" :self.password, "Phone Number": self.phonenumber, "profileImageUrl": profileImageUrl]
                               
                                 let userReference = ref.child("Users").child(uid)
                                 userReference.updateChildValues(values, withCompletionBlock: {(err, ref) in
@@ -163,51 +155,18 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
                                 })
                                 
                             }
-                            
-                
-                 /*  let ref = FIRDatabase.database().reference(fromURL: "https://mycty-bc2ab.firebaseio.com/")
-                    let userReference = ref.child("Users").child(uid)
-                    
-                    let values = ["Username" : username, "Email": email, "Password" :password, "Phone Number": phonenumber]
-                    
-                    userReference.updateChildValues(values, withCompletionBlock: {(err, ref) in
-                        if err != nil {
-                            print (err!)
-                            return
-                        }
- 
-                            })
- */
                         })
                     }
-                 //   self.performSegue(withIdentifier: "signinToHome", sender: self)
+                    let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LandingPageVC")
+                    self.present(vc, animated: true, completion: nil)
 
                 }
             }
         })
         }
-    }   //print("Saved user successfully into Firebase db")
-            
-        
-            /*
-                    
-                    self.ref?.child("Email").childByAutoId().setValue(self.emailTxtField.text)
-                    self.ref?.child("Username").childByAutoId().setValue(self.usernameTxtField.text)
-                    
-                    self.ref?.child("Password").childByAutoId().setValue(self.passwordTxtField.text)
-                   self.ref?.child("Re-type Password").childByAutoId().setValue(self.retypePassTxtField.text)
-                   self.ref?.child("Phone Number").childByAutoId().setValue(self.passwordTxtField.text)
-                  
-                    
-            */
-            
-     
+    }
     
-
-
-
-
-        //Upload profile picture
+    
        @IBAction func uploadProfilePic(_ sender: Any) {
         if UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.photoLibrary) {
             let imagePicker = UIImagePickerController()
@@ -238,8 +197,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         func configureGradientBackground(colors:CGColor...){
         
         let gradient: CAGradientLayer = CAGradientLayer()
-        //let maxWidth = max(self.view.bounds.size.height,self.view.bounds.size.width)
-        // let size = CGSize(width: 100, height: 100)
         let squareFrame = CGRect(origin: self.view.bounds.origin, size: CGSize(width: 600, height: 1000))
         gradient.frame = squareFrame
         

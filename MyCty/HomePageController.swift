@@ -21,8 +21,7 @@ class HomeViewController : UIViewController{
     
     @IBAction func loggedIn(_ sender: Any) {
     
- 
-    if FIRAuth.auth()?.currentUser != nil {
+        if FIRAuth.auth()?.currentUser != nil {
     let successController = UIAlertController(title: "Logged in as", message: FIRAuth.auth()?.currentUser?.email!, preferredStyle: .alert)
     let defaultActionSuccess = UIAlertAction(title: "OK", style: .cancel, handler: nil)
     successController.addAction(defaultActionSuccess)
@@ -36,14 +35,11 @@ class HomeViewController : UIViewController{
         alertController.addAction(defaultAction)
         
         present(alertController, animated: true, completion: nil)
-        
-
-    }
+        }
     }
     
     @IBAction func Btn(_ sender: Any) {
        
-        
         if FIRAuth.auth()?.currentUser != nil {
             
            // print(FIRAuth.auth()?.currentUser?.email!)
@@ -64,8 +60,6 @@ class HomeViewController : UIViewController{
        
     }
     
-    
-    
     func configureGradientBackground(colors:CGColor...){
         
         let gradient: CAGradientLayer = CAGradientLayer()
@@ -78,12 +72,9 @@ class HomeViewController : UIViewController{
         view.layer.insertSublayer(gradient, at: 0)
     }
     
-
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureGradientBackground(colors: UIColor.blue.cgColor, UIColor.green.cgColor)
 
-        
-}
+        }
 }

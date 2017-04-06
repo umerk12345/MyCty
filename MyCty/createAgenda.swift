@@ -16,18 +16,10 @@ import FirebaseAuth
 class AgendaDetailVC: UIViewController, UITextFieldDelegate{
     
     @IBOutlet weak var categoryTextField: UITextField!
-    
     @IBOutlet weak var locationTextField: UITextField!
-    
     @IBOutlet weak var timeTextField: UITextField!
-    
     @IBOutlet weak var dateTextField: UITextField!
-    
-    
     @IBOutlet weak var descriptionField: UITextView!
-    
-  
-   
     
     @IBAction func createAgenda(_ sender: Any) {
         
