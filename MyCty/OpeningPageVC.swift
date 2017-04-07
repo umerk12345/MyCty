@@ -11,6 +11,9 @@ import SpriteKit
 import GameplayKit
 import Firebase
 import FirebaseAuth
+import FBSDKCoreKit
+import FBSDKLoginKit
+import SwiftKeychainWrapper
 
 extension Timer {
     class func schedule(delay: TimeInterval, handler: ((Timer?) -> Void)!) -> Timer! {
@@ -35,6 +38,26 @@ class OpeningViewController : UIViewController{
     var scene:cloudScene?
     var scene2:carScene?
     
+    @IBAction func facebookBtnPressed(_ sender: Any) {
+        let facebookLogin = FBSDKLoginManager()
+        facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
+            if error != nil {
+                print("Umer: Unable to authenticate with Facebook - \(error)")
+            } else if result?.isCancelled == true {
+                print("Umer: User canceled Facebook authentication")
+            } else {
+                print("Umer: Successfully authenticated with Facebook")
+                let credential = FIRFacebookAuthProvider.credential(withAccessToken: FBSDKAccessToken.current().tokenString)
+                self.firebaseAuth(credential)
+                let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LandingPageVC")
+                self.present(vc, animated: true, completion: nil)
+
+            }
+            
+        }
+        
+    }
+
     
     @IBAction func forgotPasswordBtn(_ sender: Any) {
     
@@ -83,6 +106,44 @@ class OpeningViewController : UIViewController{
         })
     
     }
+    
+    private func completeSignIn(uid: String, userData: [String : String]) {
+        let keychainResult = KeychainWrapper(serviceName: "uid", accessGroup: KEY_UID)
+        print("umer: Data saved to keychain \(keychainResult)")
+        /*
+         DataService.ds.createFBDBUser(uid, userData: userData)
+         _ = KeychainWrapper.defaultKeychainWrapper().setString("uid", forKey: KEY_UID)
+         */
+            }
+
+    
+    private func firebaseAuth(_ credential: FIRAuthCredential) {
+        FIRAuth.auth()?.signIn(with: credential, completion: { (user, error) in
+            if error != nil {
+                print("Umer: Unable to authenticate with Firebase - \(error)")
+            } else {
+                print("Umer: Successfully authenticated with Firebase")
+                /*if let user = user {
+                 let userData = ["provider" : credential.provider]
+                 self.completeSignIn(uid: user.uid, userData: userData)
+                 }
+                 }
+                 
+                 })
+                 */
+            }
+        })
+    }
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
 
    override func viewDidLoad() {
     

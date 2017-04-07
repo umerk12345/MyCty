@@ -43,6 +43,7 @@
 		74DD65141E838FF800697175 /* createAgenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD65131E838FF800697175 /* createAgenda.swift */; };
 		74DD651E1E873B3D00697175 /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD651D1E873B3D00697175 /* Agenda.swift */; };
 		74DD65841E93278200697175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74DD65831E93278200697175 /* GoogleService-Info.plist */; };
+		74ED89E81E970A8200B3B953 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ED89E71E970A8200B3B953 /* Constants.swift */; };
 		74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */; };
 		74F1A8271E74EE3E00EA0188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8261E74EE3E00EA0188 /* Assets.xcassets */; };
 		74F1A82A1E74EE3E00EA0188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8281E74EE3E00EA0188 /* LaunchScreen.storyboard */; };
@@ -89,6 +90,7 @@
 		74DD65131E838FF800697175 /* createAgenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAgenda.swift; sourceTree = "<group>"; };
 		74DD651D1E873B3D00697175 /* Agenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
 		74DD65831E93278200697175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74ED89E71E970A8200B3B953 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		74F1A81C1E74EE3E00EA0188 /* MyCty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F1A8261E74EE3E00EA0188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -225,6 +227,14 @@
 			name = SignUp/Login;
 			sourceTree = "<group>";
 		};
+		74ED89E61E970A6C00B3B953 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				74ED89E71E970A8200B3B953 /* Constants.swift */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
 		74F1A8131E74EE3E00EA0188 = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +256,7 @@
 		74F1A81E1E74EE3E00EA0188 /* MyCty */ = {
 			isa = PBXGroup;
 			children = (
+				74ED89E61E970A6C00B3B953 /* Util */,
 				748E31631E78F16A00911071 /* SignUp/Login */,
 				7489B3ED1E80F16100DFAFC9 /* HomePage */,
 				742C5C501E7904BD00553161 /* OnBoarding */,
@@ -400,6 +411,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				741C901F1E7A553600E0EC3D /* IQUIWindow+Hierarchy.swift in Sources */,
+				74ED89E81E970A8200B3B953 /* Constants.swift in Sources */,
 				745EBD761E8359CB0022664D /* LandingPageVC.swift in Sources */,
 				741C901B1E7A553600E0EC3D /* IQUIScrollView+Additions.swift in Sources */,
 				741C90011E7A213400E0EC3D /* OpeningPageVC.swift in Sources */,

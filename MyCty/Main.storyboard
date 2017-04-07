@@ -240,13 +240,16 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGr-GW-Ora">
-                                        <rect key="frame" x="338" y="696" width="18" height="21"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rGr-GW-Ora">
+                                        <rect key="frame" x="338.66666666666669" y="696" width="18" height="21"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="18" id="lfm-ld-aNb"/>
                                             <constraint firstAttribute="height" constant="21" id="wMj-uU-xy8"/>
                                         </constraints>
-                                        <state key="normal" title="F"/>
+                                        <state key="normal" image="Facebook"/>
+                                        <connections>
+                                            <action selector="facebookBtnPressed:" destination="ict-Tx-br0" eventType="touchUpInside" id="aOQ-KV-zeJ"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
@@ -858,6 +861,7 @@
         <image name="Button - Decline" width="86" height="26"/>
         <image name="Button - Finish" width="86" height="26"/>
         <image name="Email Icon" width="29" height="20"/>
+        <image name="Facebook" width="25" height="25"/>
         <image name="Front Building" width="126" height="277"/>
         <image name="Login Button" width="86" height="26"/>
         <image name="MyCTY Logo" width="316" height="135"/>
