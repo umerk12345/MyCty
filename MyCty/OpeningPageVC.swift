@@ -99,17 +99,20 @@ class OpeningViewController : UIViewController{
                 self.present(alertController, animated: true, completion: nil)
             }
             else {
-                let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LandingPageVC")
-                self.present(vc, animated: true, completion: nil)
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
             }
             
-        })
     
     }
+        }
+        )}
     
-    private func completeSignIn(uid: String, userData: [String : String]) {
-        let keychainResult = KeychainWrapper(serviceName: "uid", accessGroup: KEY_UID)
+    private func completeSignIn(id: String) {
+        let keychainResult = KeychainWrapper.standard.set(id, forKey: KEY_UID) //.setString
         print("umer: Data saved to keychain \(keychainResult)")
+        let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LandingPageVC")
+        self.present(vc, animated: true, completion: nil)
         /*
          DataService.ds.createFBDBUser(uid, userData: userData)
          _ = KeychainWrapper.defaultKeychainWrapper().setString("uid", forKey: KEY_UID)
@@ -123,6 +126,9 @@ class OpeningViewController : UIViewController{
                 print("Umer: Unable to authenticate with Firebase - \(error)")
             } else {
                 print("Umer: Successfully authenticated with Firebase")
+                if let user = user{
+                    self.completeSignIn(id: user.uid)
+                }
                 /*if let user = user {
                  let userData = ["provider" : credential.provider]
                  self.completeSignIn(uid: user.uid, userData: userData)
@@ -138,8 +144,14 @@ class OpeningViewController : UIViewController{
     
     
     
-    
-    
+    override func viewDidAppear(_ animated: Bool) {
+        if let _ = KeychainWrapper.standard.string(forKey: KEY_UID){// stringForKey(Key_UID) {
+            print("Umer: ID found in Keychain")
+            let vc = UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: "LandingPageVC")
+            self.present(vc, animated: true, completion: nil)
+            
+        }
+    }
     
     
     

@@ -64,7 +64,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="236"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="FJI-Sa-7Xn" id="qpf-ag-8dF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="235.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="235"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hfn-77-B5k">
@@ -223,18 +223,31 @@
                                 <state key="normal" title="Button" image="Menu"/>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MyCTY Logo" translatesAutoresizingMaskIntoConstraints="NO" id="eM2-7T-0DT">
-                                <rect key="frame" x="137.5" y="19" width="100" height="37"/>
+                                <rect key="frame" x="138" y="19" width="100" height="37"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="37" id="DRd-Zs-9xW"/>
                                     <constraint firstAttribute="width" constant="100" id="aok-ek-UfU"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDM-bU-DSR">
+                                <rect key="frame" x="54" y="26" width="66" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="66" id="Bdp-fa-2gK"/>
+                                    <constraint firstAttribute="height" constant="30" id="IIO-wB-5uS"/>
+                                </constraints>
+                                <state key="normal" title="SignOut"/>
+                                <connections>
+                                    <action selector="signOut:" destination="Oln-Ms-2cy" eventType="touchUpInside" id="GEP-qQ-DhY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="eM2-7T-0DT" firstAttribute="centerX" secondItem="zdb-U2-HFm" secondAttribute="centerX" id="CgJ-vP-HIf"/>
+                            <constraint firstItem="fDM-bU-DSR" firstAttribute="top" secondItem="U4d-qh-9uW" secondAttribute="bottom" constant="6" id="Cw4-zl-7x8"/>
                             <constraint firstItem="3J6-co-dkF" firstAttribute="top" secondItem="jxc-Z6-fr1" secondAttribute="bottom" id="GzM-oy-3Cs"/>
                             <constraint firstItem="byZ-qO-Ghj" firstAttribute="top" secondItem="zdb-U2-HFm" secondAttribute="topMargin" constant="26" id="HcC-PZ-GGJ"/>
+                            <constraint firstItem="fDM-bU-DSR" firstAttribute="leading" secondItem="byZ-qO-Ghj" secondAttribute="trailing" constant="8" id="Hua-NR-qyE"/>
                             <constraint firstItem="xec-mh-00r" firstAttribute="leading" secondItem="zdb-U2-HFm" secondAttribute="leading" id="Izs-Oq-9yf"/>
                             <constraint firstItem="byZ-qO-Ghj" firstAttribute="leading" secondItem="zdb-U2-HFm" secondAttribute="leadingMargin" id="KcS-rZ-btV"/>
                             <constraint firstItem="jxc-Z6-fr1" firstAttribute="leading" secondItem="zdb-U2-HFm" secondAttribute="leading" id="Mmc-Np-Wtn"/>

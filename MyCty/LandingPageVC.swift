@@ -9,7 +9,7 @@
 
 import UIKit
 import Firebase
-
+import SwiftKeychainWrapper
 
   //var agenda: [[String]] = [["", "", "", ""]]
 class LandingPageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
@@ -71,6 +71,18 @@ class LandingPageVC: UIViewController, UITableViewDataSource, UITableViewDelegat
             myTableView.reloadData()
         }
     }
+    
+    
+    @IBAction func signOut(_ sender: Any) {
+        let keychainResult = KeychainWrapper.standard.removeObject(forKey: KEY_UID)//removeObjectForKey
+        print("Umer: ID removed from keychain \(keychainResult)")
+        try! FIRAuth.auth()?.signOut()
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OpeningView")
+        self.present(vc, animated: true, completion: nil)
+
+
+    }
+    
     
     override func viewDidAppear(_ animated: Bool) {
         myTableView.reloadData()
