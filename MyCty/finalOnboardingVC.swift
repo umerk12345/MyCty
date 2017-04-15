@@ -28,7 +28,7 @@ class finalOnboardingVC : UIViewController {
         
 
     override func viewDidAppear(_ animated: Bool) {
-        if let x  = UserDefaults.standard.object(forKey: "start") as? Bool
+        /*if let x  = UserDefaults.standard.object(forKey: "start") as? Bool
         {
             let storyboard = UIStoryboard(name: "Main", bundle: nil)
             var vc = UIViewController()
@@ -42,4 +42,7 @@ class finalOnboardingVC : UIViewController {
             print("not saved")
         }
     }
+ 
+ */
+}
 }

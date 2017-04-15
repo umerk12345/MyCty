@@ -13,18 +13,10 @@ import FirebaseDatabase
 
 class forgotPasswordController : UIViewController, UITextFieldDelegate {
     
-   
-    
-    
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var submitBtn: UIButton!
-    
-    
     @IBOutlet weak var emailTxtField: UITextField!
-    
-    
-    
-    
+
     @IBAction func submit(_ sender: Any) {
         
         if self.emailTxtField.text == "" {
@@ -60,7 +52,6 @@ class forgotPasswordController : UIViewController, UITextFieldDelegate {
         }
 
     }
-    
     
     override func viewDidLoad() {
         

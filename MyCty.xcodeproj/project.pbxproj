@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1D8E6B058AA9E76AD01C1ABA /* Pods_MyCty.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B5BF96DC3E69C16C4A726E /* Pods_MyCty.framework */; };
+		23ED4D5C1E95E44F00718FE5 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23ED4D5B1E95E44F00718FE5 /* DataService.swift */; };
 		741C90011E7A213400E0EC3D /* OpeningPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90001E7A213400E0EC3D /* OpeningPageVC.swift */; };
 		741C901A1E7A553600E0EC3D /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90041E7A553600E0EC3D /* IQNSArray+Sort.swift */; };
 		741C901B1E7A553600E0EC3D /* IQUIScrollView+Additions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90051E7A553600E0EC3D /* IQUIScrollView+Additions.swift */; };
@@ -27,8 +28,6 @@
 		741C90291E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90171E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift */; };
 		741C902A1E7A553600E0EC3D /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 741C90191E7A553600E0EC3D /* IQKeyboardManager.bundle */; };
 		741C902D1E7B10C400E0EC3D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741C902C1E7B10C400E0EC3D /* SpriteKit.framework */; };
-		741C90351E7BA17400E0EC3D /* cloudScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90341E7BA17400E0EC3D /* cloudScene.swift */; };
-		741C90371E7C0BF100E0EC3D /* carScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90361E7C0BF100E0EC3D /* carScene.swift */; };
 		742C5C521E7904DC00553161 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742C5C511E7904DC00553161 /* Onboarding.storyboard */; };
 		742C5C541E79EEE800553161 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742C5C531E79EEE800553161 /* OnBoardingVC.swift */; };
 		742C5C561E7A087800553161 /* finalOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742C5C551E7A087800553161 /* finalOnboardingVC.swift */; };
@@ -36,12 +35,14 @@
 		745EBD761E8359CB0022664D /* LandingPageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745EBD751E8359CB0022664D /* LandingPageVC.swift */; };
 		7489B3EC1E7DF31A00DFAFC9 /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7489B3EB1E7DF31A00DFAFC9 /* Onboarding.swift */; };
 		7489B3EF1E80F18B00DFAFC9 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7489B3EE1E80F18B00DFAFC9 /* Home.storyboard */; };
-		748E31561E74F21C00911071 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 748E31551E74F21C00911071 /* GoogleService-Info.plist */; };
 		748E315C1E750B5500911071 /* HomePageController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E315B1E750B5500911071 /* HomePageController.swift */; };
 		748E315E1E7642BA00911071 /* forgotPasswordController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E315D1E7642BA00911071 /* forgotPasswordController.swift */; };
 		748E31601E764E8200911071 /* termsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 748E315F1E764E8200911071 /* termsViewController.swift */; };
 		74DD65141E838FF800697175 /* createAgenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD65131E838FF800697175 /* createAgenda.swift */; };
 		74DD651E1E873B3D00697175 /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD651D1E873B3D00697175 /* Agenda.swift */; };
+		74DD65841E93278200697175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74DD65831E93278200697175 /* GoogleService-Info.plist */; };
+		74ED89E81E970A8200B3B953 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ED89E71E970A8200B3B953 /* Constants.swift */; };
+		74ED89F31E9F192000B3B953 /* FullAgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ED89F21E9F192000B3B953 /* FullAgendaView.swift */; };
 		74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */; };
 		74F1A8271E74EE3E00EA0188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8261E74EE3E00EA0188 /* Assets.xcassets */; };
 		74F1A82A1E74EE3E00EA0188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8281E74EE3E00EA0188 /* LaunchScreen.storyboard */; };
@@ -51,6 +52,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		23ED4D5B1E95E44F00718FE5 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
 		5CDD8FE7E90576C253045835 /* Pods-MyCty.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyCty.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyCty/Pods-MyCty.debug.xcconfig"; sourceTree = "<group>"; };
 		741C90001E7A213400E0EC3D /* OpeningPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OpeningPageVC.swift; sourceTree = "<group>"; };
 		741C90041E7A553600E0EC3D /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQNSArray+Sort.swift"; sourceTree = "<group>"; };
@@ -72,8 +74,6 @@
 		741C90171E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		741C90191E7A553600E0EC3D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		741C902C1E7B10C400E0EC3D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		741C90341E7BA17400E0EC3D /* cloudScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cloudScene.swift; sourceTree = "<group>"; };
-		741C90361E7C0BF100E0EC3D /* carScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carScene.swift; sourceTree = "<group>"; };
 		742C5C511E7904DC00553161 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		742C5C531E79EEE800553161 /* OnBoardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		742C5C551E7A087800553161 /* finalOnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finalOnboardingVC.swift; sourceTree = "<group>"; };
@@ -81,12 +81,14 @@
 		745EBD751E8359CB0022664D /* LandingPageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LandingPageVC.swift; sourceTree = "<group>"; };
 		7489B3EB1E7DF31A00DFAFC9 /* Onboarding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
 		7489B3EE1E80F18B00DFAFC9 /* Home.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
-		748E31551E74F21C00911071 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		748E315B1E750B5500911071 /* HomePageController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomePageController.swift; sourceTree = "<group>"; };
 		748E315D1E7642BA00911071 /* forgotPasswordController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = forgotPasswordController.swift; sourceTree = "<group>"; };
 		748E315F1E764E8200911071 /* termsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = termsViewController.swift; sourceTree = "<group>"; };
 		74DD65131E838FF800697175 /* createAgenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = createAgenda.swift; sourceTree = "<group>"; };
 		74DD651D1E873B3D00697175 /* Agenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
+		74DD65831E93278200697175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		74ED89E71E970A8200B3B953 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74ED89F21E9F192000B3B953 /* FullAgendaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullAgendaView.swift; sourceTree = "<group>"; };
 		74F1A81C1E74EE3E00EA0188 /* MyCty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F1A8261E74EE3E00EA0188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -196,6 +198,8 @@
 				74DD651D1E873B3D00697175 /* Agenda.swift */,
 				745EBD731E8355960022664D /* TableViewCell.swift */,
 				745EBD751E8359CB0022664D /* LandingPageVC.swift */,
+				23ED4D5B1E95E44F00718FE5 /* DataService.swift */,
+				74ED89F21E9F192000B3B953 /* FullAgendaView.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -209,17 +213,23 @@
 				74F1A8261E74EE3E00EA0188 /* Assets.xcassets */,
 				741C90021E7A553600E0EC3D /* IQKeyboardManagerSwift */,
 				74F1A8281E74EE3E00EA0188 /* LaunchScreen.storyboard */,
-				748E31551E74F21C00911071 /* GoogleService-Info.plist */,
 				74F1A8371E74EFE300EA0188 /* LoginViewController.swift */,
+				74DD65831E93278200697175 /* GoogleService-Info.plist */,
 				74F1A82B1E74EE3E00EA0188 /* Info.plist */,
 				748E315B1E750B5500911071 /* HomePageController.swift */,
 				748E315D1E7642BA00911071 /* forgotPasswordController.swift */,
 				748E315F1E764E8200911071 /* termsViewController.swift */,
-				741C90341E7BA17400E0EC3D /* cloudScene.swift */,
 				741C90001E7A213400E0EC3D /* OpeningPageVC.swift */,
-				741C90361E7C0BF100E0EC3D /* carScene.swift */,
 			);
 			name = SignUp/Login;
+			sourceTree = "<group>";
+		};
+		74ED89E61E970A6C00B3B953 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				74ED89E71E970A8200B3B953 /* Constants.swift */,
+			);
+			name = Util;
 			sourceTree = "<group>";
 		};
 		74F1A8131E74EE3E00EA0188 = {
@@ -243,6 +253,7 @@
 		74F1A81E1E74EE3E00EA0188 /* MyCty */ = {
 			isa = PBXGroup;
 			children = (
+				74ED89E61E970A6C00B3B953 /* Util */,
 				748E31631E78F16A00911071 /* SignUp/Login */,
 				7489B3ED1E80F16100DFAFC9 /* HomePage */,
 				742C5C501E7904BD00553161 /* OnBoarding */,
@@ -335,9 +346,9 @@
 				74F1A82A1E74EE3E00EA0188 /* LaunchScreen.storyboard in Resources */,
 				742C5C521E7904DC00553161 /* Onboarding.storyboard in Resources */,
 				741C902A1E7A553600E0EC3D /* IQKeyboardManager.bundle in Resources */,
-				748E31561E74F21C00911071 /* GoogleService-Info.plist in Resources */,
 				74F1A8271E74EE3E00EA0188 /* Assets.xcassets in Resources */,
 				74F1A8341E74EFB800EA0188 /* Main.storyboard in Resources */,
+				74DD65841E93278200697175 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -397,6 +408,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				741C901F1E7A553600E0EC3D /* IQUIWindow+Hierarchy.swift in Sources */,
+				74ED89E81E970A8200B3B953 /* Constants.swift in Sources */,
 				745EBD761E8359CB0022664D /* LandingPageVC.swift in Sources */,
 				741C901B1E7A553600E0EC3D /* IQUIScrollView+Additions.swift in Sources */,
 				741C90011E7A213400E0EC3D /* OpeningPageVC.swift in Sources */,
@@ -406,7 +418,6 @@
 				741C90261E7A553600E0EC3D /* IQPreviousNextView.swift in Sources */,
 				748E31601E764E8200911071 /* termsViewController.swift in Sources */,
 				741C90221E7A553600E0EC3D /* IQKeyboardManager.swift in Sources */,
-				741C90371E7C0BF100E0EC3D /* carScene.swift in Sources */,
 				742C5C541E79EEE800553161 /* OnBoardingVC.swift in Sources */,
 				741C90271E7A553600E0EC3D /* IQTitleBarButtonItem.swift in Sources */,
 				7489B3EC1E7DF31A00DFAFC9 /* Onboarding.swift in Sources */,
@@ -421,9 +432,10 @@
 				741C90201E7A553600E0EC3D /* IQKeyboardManagerConstants.swift in Sources */,
 				745EBD741E8355960022664D /* TableViewCell.swift in Sources */,
 				748E315E1E7642BA00911071 /* forgotPasswordController.swift in Sources */,
-				741C90351E7BA17400E0EC3D /* cloudScene.swift in Sources */,
 				74F1A8361E74EFDB00EA0188 /* ViewController.swift in Sources */,
+				23ED4D5C1E95E44F00718FE5 /* DataService.swift in Sources */,
 				741C90231E7A553600E0EC3D /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				74ED89F31E9F192000B3B953 /* FullAgendaView.swift in Sources */,
 				74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */,
 				741C90211E7A553600E0EC3D /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				741C90281E7A553600E0EC3D /* IQToolbar.swift in Sources */,
