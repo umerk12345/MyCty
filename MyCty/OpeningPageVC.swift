@@ -29,6 +29,7 @@ class OpeningViewController : UIViewController{
    
     @IBOutlet weak var emailLoginTxt: UITextField!
     @IBOutlet weak var passwordLoginTxt: UITextField!
+    /*
     @IBOutlet weak var sceneView: SKView!
     @IBOutlet weak var sceneView2: SKView!
     @IBOutlet weak var sceneView3: SKView!
@@ -37,7 +38,7 @@ class OpeningViewController : UIViewController{
     
     var scene:cloudScene?
     var scene2:carScene?
-    
+    */
     @IBAction func facebookBtnPressed(_ sender: Any) {
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
@@ -160,17 +161,17 @@ class OpeningViewController : UIViewController{
    override func viewDidLoad() {
     
         //login.layer.cornerRadius = 10
-        signUp.layer.cornerRadius = 10
+        //signUp.layer.cornerRadius = 10
         super.viewDidLoad()
 
-    self.scene = cloudScene(size: CGSize(width: self.sceneView.frame.size.width, height:self.sceneView.frame.size.height))
-     self.scene2 = carScene(size: CGSize(width: self.sceneView2.frame.size.width, height:self.sceneView2.frame.size.height))
+    //self.scene = cloudScene(size: CGSize(width: self.sceneView.frame.size.width, height:self.sceneView.frame.size.height))
+    // self.scene2 = carScene(size: CGSize(width: self.sceneView2.frame.size.width, height:self.sceneView2.frame.size.height))
  
-    self.sceneView.presentScene(scene)
-    self.sceneView2.presentScene(scene2)
+    //self.sceneView.presentScene(scene)
+    //self.sceneView2.presentScene(scene2)
     
-    self.scene?.floatingCloud()
-    self.scene2?.movingCar()
+   // self.scene?.floatingCloud()
+   // self.scene2?.movingCar()
     
     
     

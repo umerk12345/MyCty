@@ -67,6 +67,12 @@ class Agenda {
         return _rating
     }
     
+    init(date: String, category: String, time: String, description: String){
+        self._date = date
+        self._category = category
+        self._time = time
+        self._description = description
+    }
     
     init(key:String, data:Dictionary<String,AnyObject>) {
         _userKey = key
@@ -98,5 +104,14 @@ class Agenda {
         if let descriptionData = data["description"] as? String {
             _description = descriptionData
         }
+        
+        if let costData = data["cost"] as? String {
+            _cost = costData
+        }
+        
+        if let eventData = data["event"] as? String {
+            _event = eventData
+        }
+        
     }
 }

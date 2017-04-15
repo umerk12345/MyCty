@@ -28,8 +28,6 @@
 		741C90291E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90171E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift */; };
 		741C902A1E7A553600E0EC3D /* IQKeyboardManager.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 741C90191E7A553600E0EC3D /* IQKeyboardManager.bundle */; };
 		741C902D1E7B10C400E0EC3D /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 741C902C1E7B10C400E0EC3D /* SpriteKit.framework */; };
-		741C90351E7BA17400E0EC3D /* cloudScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90341E7BA17400E0EC3D /* cloudScene.swift */; };
-		741C90371E7C0BF100E0EC3D /* carScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 741C90361E7C0BF100E0EC3D /* carScene.swift */; };
 		742C5C521E7904DC00553161 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 742C5C511E7904DC00553161 /* Onboarding.storyboard */; };
 		742C5C541E79EEE800553161 /* OnBoardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742C5C531E79EEE800553161 /* OnBoardingVC.swift */; };
 		742C5C561E7A087800553161 /* finalOnboardingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742C5C551E7A087800553161 /* finalOnboardingVC.swift */; };
@@ -44,6 +42,7 @@
 		74DD651E1E873B3D00697175 /* Agenda.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74DD651D1E873B3D00697175 /* Agenda.swift */; };
 		74DD65841E93278200697175 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 74DD65831E93278200697175 /* GoogleService-Info.plist */; };
 		74ED89E81E970A8200B3B953 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ED89E71E970A8200B3B953 /* Constants.swift */; };
+		74ED89F31E9F192000B3B953 /* FullAgendaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74ED89F21E9F192000B3B953 /* FullAgendaView.swift */; };
 		74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */; };
 		74F1A8271E74EE3E00EA0188 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8261E74EE3E00EA0188 /* Assets.xcassets */; };
 		74F1A82A1E74EE3E00EA0188 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74F1A8281E74EE3E00EA0188 /* LaunchScreen.storyboard */; };
@@ -75,8 +74,6 @@
 		741C90171E7A553600E0EC3D /* IQUIView+IQKeyboardToolbar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "IQUIView+IQKeyboardToolbar.swift"; sourceTree = "<group>"; };
 		741C90191E7A553600E0EC3D /* IQKeyboardManager.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = IQKeyboardManager.bundle; sourceTree = "<group>"; };
 		741C902C1E7B10C400E0EC3D /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
-		741C90341E7BA17400E0EC3D /* cloudScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = cloudScene.swift; sourceTree = "<group>"; };
-		741C90361E7C0BF100E0EC3D /* carScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = carScene.swift; sourceTree = "<group>"; };
 		742C5C511E7904DC00553161 /* Onboarding.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		742C5C531E79EEE800553161 /* OnBoardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnBoardingVC.swift; sourceTree = "<group>"; };
 		742C5C551E7A087800553161 /* finalOnboardingVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = finalOnboardingVC.swift; sourceTree = "<group>"; };
@@ -91,6 +88,7 @@
 		74DD651D1E873B3D00697175 /* Agenda.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Agenda.swift; sourceTree = "<group>"; };
 		74DD65831E93278200697175 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		74ED89E71E970A8200B3B953 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		74ED89F21E9F192000B3B953 /* FullAgendaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FullAgendaView.swift; sourceTree = "<group>"; };
 		74F1A81C1E74EE3E00EA0188 /* MyCty.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCty.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74F1A81F1E74EE3E00EA0188 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74F1A8261E74EE3E00EA0188 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -201,6 +199,7 @@
 				745EBD731E8355960022664D /* TableViewCell.swift */,
 				745EBD751E8359CB0022664D /* LandingPageVC.swift */,
 				23ED4D5B1E95E44F00718FE5 /* DataService.swift */,
+				74ED89F21E9F192000B3B953 /* FullAgendaView.swift */,
 			);
 			name = HomePage;
 			sourceTree = "<group>";
@@ -220,9 +219,7 @@
 				748E315B1E750B5500911071 /* HomePageController.swift */,
 				748E315D1E7642BA00911071 /* forgotPasswordController.swift */,
 				748E315F1E764E8200911071 /* termsViewController.swift */,
-				741C90341E7BA17400E0EC3D /* cloudScene.swift */,
 				741C90001E7A213400E0EC3D /* OpeningPageVC.swift */,
-				741C90361E7C0BF100E0EC3D /* carScene.swift */,
 			);
 			name = SignUp/Login;
 			sourceTree = "<group>";
@@ -421,7 +418,6 @@
 				741C90261E7A553600E0EC3D /* IQPreviousNextView.swift in Sources */,
 				748E31601E764E8200911071 /* termsViewController.swift in Sources */,
 				741C90221E7A553600E0EC3D /* IQKeyboardManager.swift in Sources */,
-				741C90371E7C0BF100E0EC3D /* carScene.swift in Sources */,
 				742C5C541E79EEE800553161 /* OnBoardingVC.swift in Sources */,
 				741C90271E7A553600E0EC3D /* IQTitleBarButtonItem.swift in Sources */,
 				7489B3EC1E7DF31A00DFAFC9 /* Onboarding.swift in Sources */,
@@ -436,10 +432,10 @@
 				741C90201E7A553600E0EC3D /* IQKeyboardManagerConstants.swift in Sources */,
 				745EBD741E8355960022664D /* TableViewCell.swift in Sources */,
 				748E315E1E7642BA00911071 /* forgotPasswordController.swift in Sources */,
-				741C90351E7BA17400E0EC3D /* cloudScene.swift in Sources */,
 				74F1A8361E74EFDB00EA0188 /* ViewController.swift in Sources */,
 				23ED4D5C1E95E44F00718FE5 /* DataService.swift in Sources */,
 				741C90231E7A553600E0EC3D /* IQKeyboardReturnKeyHandler.swift in Sources */,
+				74ED89F31E9F192000B3B953 /* FullAgendaView.swift in Sources */,
 				74F1A8201E74EE3E00EA0188 /* AppDelegate.swift in Sources */,
 				741C90211E7A553600E0EC3D /* IQKeyboardManagerConstantsInternal.swift in Sources */,
 				741C90281E7A553600E0EC3D /* IQToolbar.swift in Sources */,

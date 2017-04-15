@@ -94,8 +94,10 @@ class SecondViewController: UIViewController {
       
     override func viewDidLoad() {
     super.viewDidLoad()
-    loginBtnLbl.layer.cornerRadius = 10
+    loginBtnLbl.layer.cornerRadius = 30
     backBtn.layer.cornerRadius = 10
+    emailLoginTxt.layer.cornerRadius = 30
+    passwordLoginTxt.layer.cornerRadius = 30
     //createGradientLayer()
             
     configureGradientBackground(colors: UIColor(red: 132.0/255.0, green: 36.0/255.0, blue: 42.0/255.0, alpha: 1.0).cgColor, UIColor(red: 245.0/255.0, green: 69.0/255.0, blue: 107.0/255.0, alpha: 1.0).cgColor)

@@ -11,14 +11,14 @@ import UIKit
 import Firebase
 import SwiftKeychainWrapper
 
-  //var agenda: [[String]] = [["", "", "", ""]]
 class LandingPageVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     //MARK: Variables & Oulets
     @IBOutlet weak var navBar: UINavigationBar!
     @IBOutlet weak var myTableView: UITableView!
-    var testingKey = "237895837hfjskdlfjkld3" //only used for testing - need user key
-    var agenda = [Agenda]()
+    //var testingKey = "237895837hfjskdlfjkld3" //only used for testing - need user key
+    var agendas = [Agenda]()
+    var selectedCell = "" as AnyObject
     
     //TODO: Setup user in Userdefaults or keychain to be used in Firebase query
     override func viewDidLoad() {
@@ -29,19 +29,24 @@ class LandingPageVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         navBar.barTintColor = UIColor(red: 132.0/255.0, green: 36.0/255.0, blue: 42.0/255.0, alpha: 1.0)
         
         //retrieve Firebase Data
-        DataService.ds.Ref_Agendas.observe(.value, with: { snap in
-            if let snap = snap.children.allObjects as? [FIRDataSnapshot] {
-                for agendas in snap {
-                    if let agendasDict = agendas.value as? Dictionary<String,AnyObject> {
-                        if let data = agendasDict[self.testingKey] as? Dictionary<String,AnyObject> {
-                            let newAgendas = Agenda(key: agendas.key, data: data)
-                            self.agenda.append(newAgendas)
+        DataService.ds.Ref_Agendas.observe(.value, with: { (snapshot) in
+            self.agendas = []
+            if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+                for snap in snapshot {
+                    //print(snap)
+                    if let agendasDict = snap.value as? Dictionary<String,AnyObject> {
+                        let key = snap.key
+                        let post = Agenda(key: key, data: agendasDict)
+                        //if let data = agendasDict[self.testingKey] as? Dictionary<String,AnyObject> {
+                        self.agendas.append(post)
+                        
                         }
                     }
                 }
+            self.myTableView.reloadData()
             }
-        })
-    }
+        )}
+    
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -49,28 +54,73 @@ class LandingPageVC: UIViewController, UITableViewDataSource, UITableViewDelegat
     
     
      func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return agenda.count
+        return agendas.count - 1
     }
+    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let agendas = agenda[indexPath.row]
+        let agenda = agendas[indexPath.row]
         
         if let cell = myTableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as? MyCustomTableViewCell {
-            cell.configureCell(agendaData: agendas)
+            cell.configureCell(agendaData: agenda)
             return cell
         } else {
-            let cell = MyCustomTableViewCell()
-            cell.configureCell(agendaData: agendas)
-            return cell
+            return MyCustomTableViewCell()
         }
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == UITableViewCellEditingStyle.delete {
-            agenda.remove(at: indexPath.row)
-            myTableView.reloadData()
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "Preview", sender: indexPath)
+        
+    }
+    
+    
+    func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
+        let rowIndex: NSIndexPath = myTableView.indexPathForSelectedRow! as NSIndexPath
+        let selectedRow: UITableViewCell = myTableView.cellForRow(at: rowIndex as IndexPath)!
+        let contentFromSelectedRow: String = selectedRow.textLabel!.text!
+        
+        if let secondVC = segue.destination as? FullAgendaView {
+            if segue.identifier == "Preview" {
+            secondVC.categorytext = ("This")
+            }
         }
     }
+
+
+
+    
+    
+    
+    
+        //deletes a table cell
+        func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCellEditingStyle.delete {
+           // let agenda = self.agendas[indexPath.row]
+            
+            agendas.remove(at: indexPath.row)
+           
+            
+            
+            
+        /*
+            DataService.ds.Ref_Agendas.observe(.value, with: { (snapshot) in
+
+        if let snapshot = snapshot.children.allObjects as? [FIRDataSnapshot] {
+            
+            for snap in snapshot{
+            let agendasDict = snap.value as? Dictionary<String,AnyObject>
+                }
+                }
+            })
+            
+           */
+          //  DataService.ds.Ref_Agendas.child
+            myTableView.reloadData()
+            
+        }
+    }
+    
     
     
     @IBAction func signOut(_ sender: Any) {
@@ -79,13 +129,16 @@ class LandingPageVC: UIViewController, UITableViewDataSource, UITableViewDelegat
         try! FIRAuth.auth()?.signOut()
         let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OpeningView")
         self.present(vc, animated: true, completion: nil)
-
-
     }
+    
+
+    
     
     
     override func viewDidAppear(_ animated: Bool) {
+        self.myTableView.separatorStyle = .none
         myTableView.reloadData()
+        
     }
 
     //override var prefersStatusBarHidden: Bool {

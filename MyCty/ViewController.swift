@@ -223,8 +223,13 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         return true
     }    
        override func viewDidLoad() {
-        finishBtnlbl.layer.cornerRadius = 10
-       
+        finishBtnlbl.layer.cornerRadius = 20
+       usernameTxtField.layer.cornerRadius = 20
+        emailTxtField.layer.cornerRadius = 20
+        passwordTxtField.layer.cornerRadius = 20
+        retypePassTxtField.layer.cornerRadius = 20
+        phoneNumberTxtField.layer.cornerRadius = 20
+        
         
         //Round profile picture
         profilePic.layer.borderWidth = 1
